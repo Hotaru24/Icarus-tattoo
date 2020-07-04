@@ -1,8 +1,16 @@
 module.exports = {
   siteMetadata: {
     title: 'Icarus-tattoo',
+    author: "Florent Pasquet",
     description:
       "A la recherche d'un tatouage à Bordeaux ? Chez Icarus-tattoo notre tatoueur borelais vous tatouera dans un style gravure et Dot",
+      social: [
+
+        {
+          name: "GitHub",
+          url: "https://github.com/epilande",
+        },
+      ]
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -14,6 +22,12 @@ module.exports = {
         path: `${__dirname}/static/img`,
         name: 'uploads',
       },
+    },
+    {
+      resolve: "gatsby-theme-gallery",
+      options: {
+        basePath: "/gallery",
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
