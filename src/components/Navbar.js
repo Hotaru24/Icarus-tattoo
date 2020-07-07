@@ -49,7 +49,7 @@ const Navbar = () => {
               A propos
               </Link>
               <Link className="navbar-item" to="/gallery">
-                Gallerie
+                Réalisations
               </Link>
               <Link className="navbar-item" to="/blog">
                 Actu

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import logo from '../img/logo.svg';
+import logo from '../img/logo2.jpg';
 import facebook from '../img/social/facebook.svg';
 import instagram from '../img/social/instagram.svg';
 
@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="content has-text-centered">
         <img
           src={logo}
-          alt="Kaldi"
+          alt="logo"
           style={{ width: '14em', height: '10em' }}
         />
       </div>

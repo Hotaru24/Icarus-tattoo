@@ -2,6 +2,7 @@ import React from 'react'
 import { navigate } from 'gatsby-link'
 import Layout from '../../components/Layout';
 import { Map,TileLayer, Marker, Popup } from 'react-leaflet';
+import "../../Style/contact.css"
 
 
 const encode = (data) => {
@@ -36,7 +37,7 @@ export default class Index extends React.Component {
   }
  
   render() {
-    const position = [47.20721169, -1.55577511];
+    const position = [44.85402, -0.598465];
 
     if (typeof window !== 'undefined') {
       return (
@@ -45,8 +46,8 @@ export default class Index extends React.Component {
             <div className="container">
               <div className="content">
                 <h1>Contact</h1>    
-     
-                <Map center={position} zoom={13}>
+
+                <Map center={position} zoom={15} style={{width: "50%", height: "250px" }} >
                   <TileLayer
                     attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
