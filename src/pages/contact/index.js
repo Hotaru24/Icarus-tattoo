@@ -54,7 +54,7 @@ export default class Index extends React.Component {
                   /> 
                   <Marker position={position}>
                     <Popup>
-                      Icarus_tattoo
+                      Icarus_tattoo 
                     </Popup>
                   </Marker>
                 </Map>
