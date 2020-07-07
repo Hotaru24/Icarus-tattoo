@@ -1,6 +1,6 @@
 import React from 'react';
 import { Gallery } from "gatsby-theme-gallery";
-import Layout from '../components/Layout'
+import Layout from '../components/Layout';
 
 const MyGallery = () => {
   return (
