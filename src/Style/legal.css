@@ -1,0 +1,41 @@
+#legalBody {
+	padding: 3% 10% !important;
+	background-color: white;
+	color: black;
+	text-align: justify;
+};
+
+#titleContainer {
+	display: flex;
+	justify-content: center;
+}
+
+#legalBody section {
+	margin-top: 40px;
+}
+
+#legalBody h1{
+	display: flex;
+	justify-content: center;
+	font-size: xx-large;
+	font-weight:bold;
+}
+
+#legalBody h2 {
+	font-size: larger;
+	font-weight:bold;
+	margin-bottom: 5px;
+}
+
+#netlify {
+	margin : 10px;
+}
+
+
+/*=============================== DESCKTOP (media queries)_===============================*/
+
+@media screen and (min-width: 800px)
+{
+	#legalBody {
+	padding: 3% 18% !important;}
+}
