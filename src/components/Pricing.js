@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Pricing = ({ data }) => (
   <div className="columns">
@@ -37,4 +37,4 @@ Pricing.propTypes = {
   ),
 }
 
-export default Pricing
+export default Pricing;

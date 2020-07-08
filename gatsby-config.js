@@ -26,7 +26,8 @@ module.exports = {
     {
       resolve: "gatsby-theme-gallery",
       options: {
-        basePath: "/gallery",
+        basePath: "/gallery", 
+        galleryPath: "static/img", 
       }
     },
     {
