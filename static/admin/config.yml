@@ -30,9 +30,10 @@ collections:
   - name: "gallery"
     label: "gallery"
     folder: "content/gallery"
-    create: true
-    fields:
-      - {label: " Image", name: "image", widget: image}  
+    widget: "image"
+    media_library:
+      config:
+        multiple: true
   
   - name: "pages"
     label: "Pages"
