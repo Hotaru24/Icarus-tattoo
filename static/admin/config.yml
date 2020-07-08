@@ -27,6 +27,13 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
 
+  - name: "gallery"
+    label: "gallery"
+    folder: "content/gallery"
+    create: true
+    fields:
+      - {label: " Image", name: "image", widget: image}  
+  
   - name: "pages"
     label: "Pages"
     files:
