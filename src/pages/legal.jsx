@@ -33,7 +33,7 @@ const Legal = () => {
           <h2>COOKIES ET DONNEES PERSONNELLES</h2>
             <p>Le site n'utilise pas de cookies et n'utilise pas les données personnelles de ses utilisateurs.<br/> 
               L'hébergeur Netlify conserve quant à lui un journal des accès et les adresse IP des visiteurs pendant moins de 30 jours. 
-              Pour plus d'informations se référer aux <a title="RGPD-Netlify" href="https://www.netlify.com/gdpr/" target="_blank">RGPD de Netlify</a>.
+              Pour plus d'informations se référer aux <a title="RGPD-Netlify" href="https://www.netlify.com/gdpr/" target="_blank" rel="noreferrer">RGPD de Netlify</a>.
             </p>
         </section>
         <section>

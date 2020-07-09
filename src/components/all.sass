@@ -9,12 +9,20 @@ $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
 $body-color: #333
 $black: #2b2523
-
 .navbar .navbar-menu
   box-shadow:none !important
 
 .navbar-burger  
     color: white !important
+
+.navbar
+  background-color: #383232 !important
+  
+.navbar-burger
+  background-color: #383232 !important
+
+.navbar-item .icon
+  color: $primary    
 
 .content .taglist
   list-style: none
@@ -74,14 +82,7 @@ $black: #2b2523
 .margin-top-0
   margin-top: 0 !important
 
-.navbar
-  background-color: #383232 !important
-  
-.navbar-burger
-  background-color: #383232 !important
 
-.navbar-item .icon
-  color: $primary
 // Override for use of svg's from https://simpleicons.org/
 .icon svg
   width: 1.5rem
@@ -89,9 +90,11 @@ $black: #2b2523
   fill: currentColor
 .navbar-brand .navbar-item.logo
   padding: 0 1rem
+
 footer.footer
-  padding: 3rem 0rem 0rem
+  padding: 1rem 0rem 0rem
   background-color: transparent
+
 
 //Menu overrides
 $menu-item-color: $white-ter
@@ -109,17 +112,8 @@ $menu-label-color: $white-ter
 .menu-list
   list-style: none !important
   text-align: left
-.social
-  padding: 2em
-.social a
-    padding: .5em .5em .3em .5em
-    border-radius: 1em
-    background-color: $white-ter
-    margin: .5em
-    width: 1em
-    height: 1em
-    vertical-align: middle
-    display: inline
+
+
 
 // blog roll
 .blog-list-item.is-featured
