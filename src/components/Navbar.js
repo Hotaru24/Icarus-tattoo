@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'gatsby';
 import logo from '../img/logoN.png';
+import "../Style/navbar.css";
 
 const Navbar = () => {
 

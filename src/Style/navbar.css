@@ -1,0 +1,45 @@
+.navbar .navbar-menu {
+  box-shadow:none !important
+}  
+
+.navbar-burger  {
+  color: white !important
+}    
+
+.navbar {
+  background-color: #383232 !important
+}  
+  
+.navbar-burger {
+  background-color: #383232 !important
+}
+
+.navbar-item {
+  color: dimgray !important 
+}
+
+#navMenu .navbar-item:hover {
+  color: gainsbo !important;
+  transform: scale(1.075);
+  transition-duration: 0.5s;
+}
+
+
+/*========================= DESCKTOP (media queries)_======================*/
+
+@media screen and (min-width: 1023px){
+
+  .navbar-item:first-child {
+    margin-left: 50px;
+  }
+
+  .navbar-item {
+    color: gainsboro !important 
+  }
+
+  #navMenu .navbar-item:hover {
+    color: white !important;
+    transform: scale(1.075);
+    transition-duration: 0.5s;
+  }
+}
