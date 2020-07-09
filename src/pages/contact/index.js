@@ -76,7 +76,7 @@ export default class Index extends React.Component {
                   </div>
                   <div className="field">
                     <label className="label" htmlFor={'name'}>
-                      Ton nom
+                      Nom
                     </label>
                     <div className="control">
                       <input

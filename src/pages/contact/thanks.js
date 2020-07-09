@@ -7,7 +7,7 @@ export default () => (
       <div className="container">
         <div className="content">
           <h1>Merci !</h1>
-          <p>Votre message a bien été envoyé. Je vous répondrai le plus vite possible.</p>
+          <p>Votre message a bien été envoyé. Je vous répondrai le plus vite possible !</p>
         </div>
       </div>
     </section>

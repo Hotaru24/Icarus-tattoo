@@ -16,8 +16,6 @@ const Navbar = () => {
   useEffect(()=>
     active ?  setnavBarActiveClass('is-active') : setnavBarActiveClass('')
   );
-
-
  
     return (
       <nav
@@ -25,10 +23,10 @@ const Navbar = () => {
         role="navigation"
         aria-label="main-navigation"
       >
-        <div className="container">
+        <div className="container"> 
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="logo" />
+              <img src={logo} alt="icarus_tattoo" />
             </Link>
             {/* Hamburger menu */}
             <div
@@ -63,6 +61,6 @@ const Navbar = () => {
         </div>
       </nav>
     )
-}
+};
 
 export default Navbar;

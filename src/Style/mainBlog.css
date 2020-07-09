@@ -1,0 +1,18 @@
+#blogCover {
+    background-image: url('/img/blogCover.jpg');
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    background-attachment: fixed;
+    position: relative;
+    min-height: 250px;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 15px;
+    padding-bottom: 15px;
+ }
+
+ header h1 {
+  background-color: rgba(0, 0, 0, 0.60);
+  color: white;
+  padding: 1rem;
+}
