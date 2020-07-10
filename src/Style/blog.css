@@ -1,6 +1,6 @@
-#aboutCover {
-    background-image: url('../../public/img/about.jpg');
-    background-color: ivory;
+#blogHeader {
+    background-image: url('../../public/img/blogCover.jpg');
+    filter: sepia(1);
     background-size: cover !important;
     -webkit-background-size: cover !important;
     background-attachment: fixed;
@@ -12,13 +12,18 @@
     margin-bottom: 0;
  }
 
- #aboutCover h1 {
-  background-color: rgba(0, 0, 0, 0.45);
+ #blogHeader h1 {
+  background-color: rgba(0, 0, 0, 0.55);
   color: white;
   padding: 1rem;
 }
 
-#aboutBody {
+#mainBlogBody{
+  background-color: ivory;
+  padding-top: 7%;
+}
+
+#blogPostBody{
   background-color: ivory;
   color: darkslategray;
 }

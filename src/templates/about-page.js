@@ -15,7 +15,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
         Présentation
       </h1>
     </header>
-    <section className="section section--gradient">
+    <section id="aboutBody" className="section section--gradient">
       <div className="container">
         <div className="columns">
           <div className="column is-10 is-offset-1">

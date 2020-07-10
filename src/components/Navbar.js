@@ -25,7 +25,7 @@ const Navbar = () => {
       >
         <div className="container"> 
           <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
+            <Link to="/" className="navbar-item" title="Accueil">
               <img src={logo} alt="icarus_tattoo" />
             </Link>
             {/* Hamburger menu */}
