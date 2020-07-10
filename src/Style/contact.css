@@ -1,4 +1,58 @@
-.leaflet-container .leaflet-retina .leaflet-fade-anim .leaflet-grab .leaflet-touch-drag {
+
+#contactPage {
+  display: flex;
+  justify-content: center;
+  background-color: ivory;
+  color: darkslategray;
+  padding: 5%;
+}
+#contactPage h1 {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+#contactMap{
+  display: none;
+}
+
+#coord{
+  display: flex;
+  justify-content: center;
+}
+
+#coordTxt{
+  margin-right: 50px;
+}
+
+#contactForm {
+  margin: 30px 12% 0 12%;
+}
+
+/*========================= TABLET (media queries)_======================*/
+
+@media screen and (min-width: 800px){
+
+  #contactPage {
+    padding: 10%;
+  }
+
+  #contactMap{
+    display: unset;
+  }
+
+  .leaflet-container .leaflet-retina .leaflet-fade-anim .leaflet-grab .leaflet-touch-drag {
     width: 80% !important;
     height: 250px !important;
+}
+
+}
+
+/*========================= DESCKTOP (media queries)_======================*/
+
+@media screen and (min-width: 1000px){
+
+  #contactPage {
+    padding: 10% 15%;
+  }
 }

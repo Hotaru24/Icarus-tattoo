@@ -13,7 +13,7 @@ const Navbar = () => {
     setactive(!active)
   };
 
-  useEffect(()=>
+  useEffect(()=> 
     active ?  setnavBarActiveClass('is-active') : setnavBarActiveClass('')
   );
  
