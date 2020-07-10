@@ -1,8 +1,9 @@
-import React from 'react'
-import { navigate } from 'gatsby-link'
+import React, { useState } from 'react';
+import { navigate } from 'gatsby-link';
 import Layout from '../../components/Layout';
 import { Map,TileLayer, Marker, Popup } from 'react-leaflet';
-import "../../Style/contact.css"
+// import Content, { HTMLContent } from '../../components/Content';
+import "../../Style/contact.css";
 
 
 const encode = (data) => {
@@ -11,17 +12,15 @@ const encode = (data) => {
     .join('&')
 }
 
-export default class Index extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { isValidated: false }
+const Index = (props) => {
+
+  const [isvalidated, setisvalidated] = useState(false);
+
+  const handleChange = (e) => {
+    setisvalidated({ [e.target.name]: e.target.value })
   }
 
-  handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value })
-  }
-
-  handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
     const form = e.target
     fetch('/', {
@@ -29,15 +28,14 @@ export default class Index extends React.Component {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': form.getAttribute('name'),
-        ...this.state,
+        ...isvalidated,
       }),
     })
       .then(() => navigate(form.getAttribute('action')))
       .catch((error) => alert(error))
   }
  
-  render() {
-    const position = [44.85402, -0.598465];
+     const position = [44.85402, -0.598465];
 
     if (typeof window !== 'undefined') {
       return (
@@ -45,33 +43,35 @@ export default class Index extends React.Component {
           <section className="section">
             <div className="container">
               <div className="content">
-                <h1>Contact</h1>    
-
-                <Map center={position} zoom={15} style={{width: "50%", height: "250px" }} >
-                  <TileLayer
-                    attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                  /> 
-                  <Marker position={position}>
-                    <Popup>
-                      Icarus_tattoo 
-                    </Popup>
-                  </Marker>
-                </Map>
+                <h1>Contact</h1> 
+                <div>
+                  {/* <PageContent className="content" content={content} /> */}
+                  <Map center={position} zoom={15} style={{width: "50%", height: "250px" }} >
+                    <TileLayer
+                      attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    /> 
+                    <Marker position={position}>
+                      <Popup>
+                        Icarus_tattoo 
+                      </Popup>
+                    </Marker>
+                  </Map>
+                </div>   
                 <form
                   name="contact"
                   method="post"
                   action="/contact/thanks/"
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
-                  onSubmit={this.handleSubmit}
+                  onSubmit={handleSubmit}
                 >
                   {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                   <input type="hidden" name="form-name" value="contact" />
                   <div hidden>
                     <label>
                       Don’t fill this out:{' '}
-                      <input name="bot-field" onChange={this.handleChange} />
+                      <input name="bot-field" onChange={handleChange} />
                     </label>
                   </div>
                   <div className="field">
@@ -83,7 +83,7 @@ export default class Index extends React.Component {
                         className="input"
                         type={'text'}
                         name={'name'}
-                        onChange={this.handleChange}
+                        onChange={handleChange}
                         id={'name'}
                         required={true}
                       />
@@ -98,7 +98,7 @@ export default class Index extends React.Component {
                         className="input"
                         type={'email'}
                         name={'email'}
-                        onChange={this.handleChange}
+                        onChange={handleChange}
                         id={'email'}
                         required={true}
                       />
@@ -112,7 +112,7 @@ export default class Index extends React.Component {
                       <textarea
                         className="textarea"
                         name={'message'}
-                        onChange={this.handleChange}
+                        onChange={handleChange}
                         id={'message'}
                         required={true}
                       />
@@ -131,6 +131,6 @@ export default class Index extends React.Component {
       )
     }
     return null
-    
-  }
-}
+};
+
+export default Index;
