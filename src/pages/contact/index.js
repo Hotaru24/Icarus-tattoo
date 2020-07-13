@@ -40,13 +40,16 @@ const Index = (props) => {
     if (typeof window !== 'undefined') {
       return (
         <Layout>
-          <section className="section">
+          <section id="contactPage" className="section">
             <div className="container">
               <div className="content">
-                <h1>Contact</h1> 
-                <div>
-                  {/* <PageContent className="content" content={content} /> */}
-                  <Map center={position} zoom={15} style={{width: "50%", height: "250px" }} >
+                <h1>Contactez nous !</h1> 
+                <div id="coord">
+                  <div id="coordTxt">
+                    <h2>Coordonnées</h2>
+                    <p>A venir</p>
+                  </div>
+                  <Map id="contactMap" center={position} zoom={15} style={{width: "50%", height: "250px" }} >
                     <TileLayer
                       attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -59,6 +62,7 @@ const Index = (props) => {
                   </Map>
                 </div>   
                 <form
+                  id="contactForm"
                   name="contact"
                   method="post"
                   action="/contact/thanks/"
