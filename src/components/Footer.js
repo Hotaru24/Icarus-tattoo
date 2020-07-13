@@ -33,20 +33,13 @@ const Footer = () => {
                     alt="Instagram"
                   />
                 </a>
-
-
             </div>
-
-
               <div className="legal">            
                 <p>© 2020 Icarus_tattoo -</p>
                 <Link  to="/legal">
                   mentions légales
-                </Link>
-                
+                </Link>                
               </div>
-
-
           </div>
         </div>
       </div>
