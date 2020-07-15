@@ -38,15 +38,17 @@ const MyGallery = () => {
               }
           `}
           render={(data) => (
+            console.log(data),
             <div style={{height : "200px", backgroundColor: "white", width: "300px"}}>
               {data.allFile.edges.map(
                 (edge)=> (
-                  console.log(edge.node.childImageSharp.fluid),
+
                   <Img 
                     style={{position: "unset", overflow: "scroll", height: "100px", width: "100px"}}
                     fluid={edge.node.childImageSharp.fluid} 
                     alt={edge.node.name} 
                     key= {edge.node.id}
+
                   />
                 )
               )}
