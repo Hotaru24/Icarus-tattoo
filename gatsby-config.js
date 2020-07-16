@@ -24,13 +24,6 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-theme-gallery",
-      options: {
-        basePath: "/galleryFull", 
-        galleryPath: "content/gallery", 
-      }
-    },
-    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages`,

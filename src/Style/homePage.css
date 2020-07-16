@@ -1,0 +1,33 @@
+#gatsby-focus-wrapper{
+  height: 100vh;
+}
+
+#homeBody{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../../static/img/homeBackground.jpg");
+  background-size: cover;
+  z-index: 1;
+}
+
+#homeNav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+  bottom: 500px;
+}
+
+.homeNavLink{
+  color: ivory;
+  margin: 0 10px;
+  font-size: 1.25em;
+}
+
+#homeLogo{
+  width: 200px;
+  filter: invert(0.05);
+}
