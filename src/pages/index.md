@@ -3,7 +3,6 @@ templateKey: index-page
 title: Icarus tattoo
 image: /img/home-jumbotron.jpg
 heading: Icarus_tattoo tatouage Bordeaux
-subheading: "tatouage à Bordeaux "
 mainpitch:
   title: Un tatoueur à votre écoute
   description: >
