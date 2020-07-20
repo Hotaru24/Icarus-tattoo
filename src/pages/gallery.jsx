@@ -1,64 +1,80 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import {StaticQuery, graphql} from 'gatsby';
+import {useStaticQuery, graphql} from 'gatsby';
 import Img from 'gatsby-image';
+import { styled } from 'baseui';
+import { FlexGrid, FlexGridItem } from 'baseui/flex-grid';
+
+const Image = styled(Img, {
+  objectFit: 'cover',
+  objectPosition: '100% 0',
+  width: '100%',
+  height: '100%',
+  maxHeight: '25rem',
+});
+
+const nodeURL = 'https://www.instagram.com/p';
 
 const MyGallery = () => {
-  return (
-    <Layout>
-      <h1>coucou</h1>
-      
-        <StaticQuery 
-          query={graphql`
-            {allFile(filter: {extension: {regex: "/(jpg)|(jpeg)|(png)|(tif)/"}, relativeDirectory: {eq: "galleryFolder"}}) {
-                  edges {
-                    node {
-                      id
-                      name
-                      relativePath
-                      birthTime
-                      childImageSharp {
-                        fluid {
-                          base64
-                          tracedSVG
-                          src
-                          srcSet
-                          srcWebp
-                          srcSetWebp
-                          sizes
-                          originalImg
-                          originalName
-                          presentationWidth
-                          presentationHeight
-                        }
-                      }
-                    }
-                  }
+  const {
+    allInstaNode: { edges },
+  } = useStaticQuery(graphql`
+    {
+      allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 12) {
+        edges {
+          node {
+            id
+            caption
+            localFile {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
                 }
               }
-          `}
-          render={(data) => (
-            console.log(data),
-            <div style={{height : "200px", backgroundColor: "white", width: "300px"}}>
-              {data.allFile.edges.map(
-                (edge)=> (
+            }
+          }
+        }
+      }
+    }
+  `);
 
-                  <Img 
-                    style={{position: "unset", overflow: "scroll", height: "100px", width: "100px"}}
-                    fluid={edge.node.childImageSharp.fluid} 
-                    alt={edge.node.name} 
-                    key= {edge.node.id}
+  const renderImages = () => {
+    const images = edges.map(({ node }) => {
+      const {
+        id,
+        caption,
+        localFile: { childImageSharp },
+      } = node;
+      return (
+        <FlexGridItem key={id} flexGridItemIndex={id}>
+          <a href={`${nodeURL}/${id}`}>
+            <Image
+              loading="lazy"
+              alt={caption || ''}
+              fluid={childImageSharp.fluid}
+            />
+          </a>
+        </FlexGridItem>
+      );
+    });
 
-                  />
-                )
-              )}
-            </div>
-          )}
+    return images;
+  };
 
-        />
-
-    </Layout>
-  )
+  return (
+    <Layout>
+    <FlexGrid
+      // Brackets specify the options for different breakpoints
+      // 1 column for small devices
+      // 2 columns for medium devices
+      // 3 columns for large devices
+      flexGridColumnCount={[1, 2, 3]}
+      flexGridColumnGap={['scale0', 'scale200']}
+      flexGridRowGap={['scale0', 'scale200']}
+    >
+      {renderImages()}
+    </FlexGrid></Layout>
+  );
 };
 
 export default MyGallery;

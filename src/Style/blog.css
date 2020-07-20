@@ -1,3 +1,4 @@
+/*------------------_BlogPage_-------------------*/
 #blogHeader {
     background-image: url('../../public/img/blogCover.jpg');
     filter: sepia(1);
@@ -22,6 +23,29 @@
   background-color: ivory;
   padding-top: 7%;
 }
+
+
+/*------------------_BlogRoll_-------------------*/
+
+#blogRollBody{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.columns is-multiline{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.blogList{
+  margin: 15px 0;
+  width: 75vw;
+}
+
+
+/*------------------_BlogPost_-------------------*/
 
 #blogPostBody{
   background-color: ivory;
