@@ -90,13 +90,8 @@ module.exports = {
     {
       resolve: `gatsby-source-instagram`,
       options: {
-        username: `username`,
-        access_token: "a valid access token",
-        instagram_id: "your instagram_business_account id",
-        paginate: 100,
-        maxPosts: 1000,
+        username: `8706675137`,
       },
-    },
     },
   ],
 }

@@ -10,43 +10,43 @@ const MyGallery = () => {
       
         <StaticQuery 
           query={graphql`
-            {allFile(filter: {extension: {regex: "/(jpg)|(jpeg)|(png)|(tif)/"}, relativeDirectory: {eq: "galleryFolder"}}) {
-                  edges {
-                    node {
-                      id
-                      name
-                      relativePath
-                      birthTime
-                      childImageSharp {
-                        fluid {
-                          base64
-                          tracedSVG
-                          src
-                          srcSet
-                          srcWebp
-                          srcSetWebp
-                          sizes
-                          originalImg
-                          originalName
-                          presentationWidth
-                          presentationHeight
-                        }
+            {allInstaNode {
+              edges {
+                node {
+                  localFile {
+                    childImageSharp {
+                      fluid {
+                        base64
+                        originalImg
+                        originalName
+                        presentationHeight
+                        presentationWidth
+                        sizes
+                        src
+                        srcSet
+                        srcSetWebp
+                        srcWebp
+                        tracedSVG
                       }
+                      id
                     }
                   }
                 }
               }
+            }
+              }
           `}
+
           render={(data) => (
             console.log(data),
-            <div style={{height : "200px", backgroundColor: "white", width: "300px"}}>
-              {data.allFile.edges.map(
+            <div style={{height : "200px", backgroundColor: "white", width: "300px", overflow: "hiden"}}>
+              {data.allInstaNode.edges.map(
                 (edge)=> (
 
                   <Img 
                     style={{position: "unset", overflow: "scroll", height: "100px", width: "100px"}}
-                    fluid={edge.node.childImageSharp.fluid} 
-                    alt={edge.node.name} 
+                    fluid={edge.node.localFile.childImageSharp.fluid} 
+                    alt={edge.node.localFile.childImageSharp.fluid.originalName} 
                     key= {edge.node.id}
 
                   />
