@@ -2,12 +2,12 @@ import React from 'react';
 import Layout from '../components/Layout';
 import {StaticQuery, graphql} from 'gatsby';
 import Img from 'gatsby-image';
+import "../Style/gallery.css";
 
 const MyGallery = () => {
   return (
     <Layout>
-      <h1>coucou</h1>
-      
+      <div id="galleryPageBody">
         <StaticQuery 
           query={graphql`
             {allInstaNode {
@@ -15,18 +15,9 @@ const MyGallery = () => {
                 node {
                   localFile {
                     childImageSharp {
-                      fluid {
-                        base64
-                        originalImg
-                        originalName
-                        presentationHeight
-                        presentationWidth
-                        sizes
-                        src
-                        srcSet
-                        srcSetWebp
-                        srcWebp
-                        tracedSVG
+                      fluid {                        
+                        originalName          
+                        src                                            
                       }
                       id
                     }
@@ -38,24 +29,27 @@ const MyGallery = () => {
           `}
 
           render={(data) => (
-            console.log(data),
-            <div style={{height : "200px", backgroundColor: "white", width: "300px", overflow: "hiden"}}>
+            <div id="galleryComponent">
               {data.allInstaNode.edges.map(
                 (edge)=> (
-
-                  <Img 
-                    style={{position: "unset", overflow: "scroll", height: "100px", width: "100px"}}
-                    fluid={edge.node.localFile.childImageSharp.fluid} 
-                    alt={edge.node.localFile.childImageSharp.fluid.originalName} 
-                    key= {edge.node.id}
-
-                  />
+                  <div className="gallery-container">
+                    <div className="gallery-item">
+                        <Img                           
+                          fluid={edge.node.localFile.childImageSharp.fluid} 
+                          alt={edge.node.localFile.childImageSharp.fluid.originalName} 
+                          key= {edge.node.id}
+                        />
+                      <div class="text">+</div>    
+                    </div>
+                  </div>
                 )
               )}
             </div>
           )}
-
         />
+      </div>
+      
+
 
     </Layout>
   )
