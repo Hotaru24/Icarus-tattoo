@@ -32,12 +32,14 @@ const MyGallery = () => {
             <div id="galleryComponent">
               {data.allInstaNode.edges.map(
                 (edge)=> (
+                  
                   <div className="gallery-container">
                     <div className="gallery-item">
                         <Img                           
                           fluid={edge.node.localFile.childImageSharp.fluid} 
                           alt={edge.node.localFile.childImageSharp.fluid.originalName} 
                           key= {edge.node.id}
+                          loading="lazy"
                         />
                       <div class="text">+</div>    
                     </div>
@@ -48,9 +50,6 @@ const MyGallery = () => {
           )}
         />
       </div>
-      
-
-
     </Layout>
   )
 };
