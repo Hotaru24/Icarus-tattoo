@@ -37,6 +37,7 @@ module.exports = {
         name: 'img',
       },
     },
+    `gatsby-plugin-modal-routing`,
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {

@@ -1,22 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Layout from '../components/Layout';
 import { graphql} from 'gatsby';
 import Img from 'gatsby-image';
 import "../Style/gallery.css";
+import "../components/all.sass"
 
 
+//query from instagram
 export const pageQuery = graphql`
   {
     allInstaNode {
       edges {
         node {
+          id
           localFile {
             childImageSharp {
-              fluid {                        
-                originalName          
-                src                                            
+              fluid {
+                originalName
+                src
               }
-              id
             }
           }
         }
@@ -25,6 +27,14 @@ export const pageQuery = graphql`
   }`
 
 const Gallery = (props) => {
+
+  // const [modal, setmodal] = useState("none");
+
+  // const toggleModal = () => {
+  //   modal === "block" ? setmodal("none") : setmodal("block")    
+  // };
+
+
   return (
     <Layout>
       <div id="galleryPageBody">
@@ -32,15 +42,16 @@ const Gallery = (props) => {
           {props.data.allInstaNode.edges.map(
             (edge)=> (                  
               <div className="gallery-container">
-                <div className="gallery-item">
-                  <Img                           
-                    fluid={edge.node.localFile.childImageSharp.fluid} 
-                    alt={edge.node.localFile.childImageSharp.fluid.originalName} 
-                    key= {edge.node.id}
-                    loading="lazy"
-                   />
-                  <div class="text">+</div>    
-                </div>
+                <a href={`https://www.instagram.com/p/${edge.node.id}/`} target="_blank" rel="noreferrer"> 
+                  <div className="gallery-item" onClick={toggleModal}>
+                    <Img                           
+                      fluid={edge.node.localFile.childImageSharp.fluid} 
+                      alt={edge.node.localFile.childImageSharp.fluid.originalName} 
+                      key= {edge.node.id}
+                    />                   
+                    <div className="text">+</div>                       
+                  </div>
+                </a>
               </div>
             )
           )}
