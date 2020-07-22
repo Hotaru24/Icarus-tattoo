@@ -64,12 +64,6 @@ module.exports = {
               destinationDir: 'static',
             },
           },
-          {
-            resolve: 'gatsby-plugin-react-leaflet',
-            options: {
-              linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
-            }
-          }
         ],
       },
     },
@@ -93,5 +87,11 @@ module.exports = {
         username: `8706675137`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-react-leaflet',
+      options: {
+        linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
+      }
+    }
   ],
 }

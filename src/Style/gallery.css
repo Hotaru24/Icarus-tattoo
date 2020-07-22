@@ -49,8 +49,8 @@
   pointer-events:none;
   z-index:4;
   transition: .3s ease-in-out;
-  -webkit-backdrop-filter: blur(1.5px) saturate(1);
-  backdrop-filter: blur(1px) saturate(1);
+  -webkit-backdrop-filter: blur(1.5px) ;
+  backdrop-filter: blur(1px) ;
   border-radius: 100%;
 }
 
