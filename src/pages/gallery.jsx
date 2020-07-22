@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Layout from '../components/Layout';
 import { graphql} from 'gatsby';
 import Img from 'gatsby-image';
@@ -43,7 +43,7 @@ const Gallery = (props) => {
             (edge)=> (                  
               <div className="gallery-container">
                 <a href={`https://www.instagram.com/p/${edge.node.id}/`} target="_blank" rel="noreferrer"> 
-                  <div className="gallery-item" onClick={toggleModal}>
+                  <div className="gallery-item">
                     <Img                           
                       fluid={edge.node.localFile.childImageSharp.fluid} 
                       alt={edge.node.localFile.childImageSharp.fluid.originalName} 
