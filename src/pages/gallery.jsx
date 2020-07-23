@@ -3,7 +3,6 @@ import Layout from '../components/Layout';
 import { graphql} from 'gatsby';
 import Img from 'gatsby-image';
 import "../Style/gallery.css";
-import "../components/all.sass"
 
 
 //query from instagram
@@ -41,7 +40,8 @@ const Gallery = (props) => {
         <div id="galleryComponent">
           {props.data.allInstaNode.edges.map(
             (edge)=> (                  
-              <div className="gallery-container">
+              <div className="gallery-container" data-sal="slide-up"
+              data-sal-delay="300" data-sal-easing="ease">
                 <a href={`https://www.instagram.com/p/${edge.node.id}/`} target="_blank" rel="noreferrer"> 
                   <div className="gallery-item">
                     <Img                           

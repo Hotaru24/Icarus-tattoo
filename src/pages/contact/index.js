@@ -43,11 +43,21 @@ const Index = (props) => {
           <section id="contactPage" className="section">
             <div className="container">
               <div className="content">
-                <h1>Contactez nous !</h1> 
+                <h1 
+                data-sal="slide-up"
+                data-sal-duration="900" 
+                data-sal-easing="ease">
+                  Contactez nous !</h1> 
                 <div id="coord">
                   <div id="coordTxt">
-                    <h2>Coordonnées</h2>
-                    <p>A venir</p>
+                    <h2
+                      data-sal="slide-up"
+                      data-sal-delay="500"
+                      data-sal-duration="900" 
+                      data-sal-easing="ease">
+                        Coordonnées
+                    </h2>
+                    <p >A venir</p>
                   </div>
                   <Map id="contactMap" center={position} zoom={15} style={{width: "50%", height: "250px" }} >
                     <TileLayer

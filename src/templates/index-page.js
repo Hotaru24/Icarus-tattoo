@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import BlogRoll from '../components/BlogRoll';
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 export const IndexPageTemplate = ({
   image,
@@ -41,6 +42,10 @@ export const IndexPageTemplate = ({
             lineHeight: '1',
             padding: '0.25em',
           }}
+          data-sal="slide-up"
+          data-sal-delay="500"
+          data-sal-duration="900" 
+          data-sal-easing="ease"
         >
           {title}
         </h1>
@@ -62,9 +67,9 @@ export const IndexPageTemplate = ({
                 </div>
                  <div className="columns">
                   <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
+                    <AniLink  className="btn" swipe top="exit" to="/gallery" duration={2}>
                       Réalisations
-                    </Link>
+                    </AniLink >
                   </div>
                 </div>
                 <div className="column is-12">

@@ -11,7 +11,12 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   return (
   <>
     <header id="aboutCover" className="full-width-image-container margin-top-0">
-      <h1 className="has-text-weight-bold is-size-1">
+      <h1 
+      className="has-text-weight-bold is-size-1"
+      data-sal="slide-up"
+      data-sal-delay="500"
+      data-sal-duration="900" 
+      data-sal-easing="ease">
         Présentation
       </h1>
     </header>
