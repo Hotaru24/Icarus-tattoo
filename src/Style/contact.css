@@ -2,14 +2,29 @@
 #contactPage {
   display: flex;
   justify-content: center;
-  background-color: ivory;
   color: darkslategray;
-  padding: 5%;
+  margin: 4%;
 }
 #contactPage h1 {
   display: flex;
   justify-content: center;
-  padding-bottom: 30px;
+  padding-bottom: 45px;
+  font-family: "Kreon";
+  font-size: 40px;
+}
+
+#contactPage h2 {
+  font-family: "Kreon";
+  font-size: 20px;
+  margin-bottom: 10px !important;
+}
+
+.contactH2Bot{
+  border-bottom-style: solid;
+  width: 80px;
+  border-bottom-width: 1px;
+  margin-left: 10px;
+  margin-bottom: 20px;
 }
 
 #contactMap{
@@ -18,23 +33,74 @@
 
 #coord{
   display: flex;
-  justify-content: center;
 }
 
 #coordTxt{
-  margin-right: 50px;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+#coordTxt ul{
+  margin-right: 30%;
+  margin-top: 0 !important;
 }
 
-#contactForm {
-  margin: 30px 12% 0 12%;
+#contctSep{
+  border-bottom-style: solid;
+  border-color: lightslategray;
+  width: 80%;
+  border-bottom-width: 1px;
+  margin: 55px 8% 55px 11%;
 }
 
+#contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contactLogo{
+  display: none;
+}
+
+#contactForm{
+  width: 100%;
+}
+
+#contactForm .field:last-child{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contactPage .button.is-link {
+  background-color: lightslategray;
+  width: 80%;
+}
+#contactPage .button.is-link:hover {
+  background-color: lightgrey;
+}
 /*========================= TABLET (media queries)_======================*/
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 750px){
 
   #contactPage {
-    padding: 10%;
+    margin: 6%;
+    padding: 3% 3% 3% 0% !important;
+    border-style: darkgray;
+    box-shadow: 0 0 45px 0
+    rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  #coordTxt{
+    width: 50%;
+    padding-left: 10%;
+  }
+
+  #coordTxt ul{
+    margin-right: 20%;
   }
 
   #contactMap{
@@ -44,7 +110,28 @@
   .leaflet-container .leaflet-retina .leaflet-fade-anim .leaflet-grab .leaflet-touch-drag {
     width: 80% !important;
     height: 250px !important;
-}
+  }
+
+  #contact{
+    justify-content: space-around;
+  }
+
+  #contactLogo{
+    display: unset;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+  }
+
+  #contactLogo img{
+    width: 250px;
+  }
+
+  #contactForm{
+    width: 50%;
+  }
 
 }
 
@@ -53,6 +140,7 @@
 @media screen and (min-width: 1000px){
 
   #contactPage {
-    padding: 10% 15%;
+    margin: 6% 17%;
   }
+
 }

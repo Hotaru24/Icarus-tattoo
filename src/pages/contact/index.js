@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { navigate } from 'gatsby-link';
 import Layout from '../../components/Layout';
 import { Map,TileLayer, Marker, Popup } from 'react-leaflet';
-import gsap from 'gsap'
+import logo from "../../img/logo2.jpg"
 import "../../Style/contact.css";
 
 
@@ -42,7 +42,7 @@ const Index = (props) => {
     if (typeof window !== 'undefined') {
       return (
         <Layout>
-          <section id="contactPage" className="section">
+          <div id="contactPage" className="section">
             <div className="container">
               <div className="content">
                 <h1 
@@ -50,17 +50,24 @@ const Index = (props) => {
                 data-sal-duration="900" 
                 data-sal-easing="elastic"
                 >
-                  Contactez nous !</h1> 
-                <div id="coord">
+                  Contactez-nous </h1> 
+                <section id="coord">
                   <div id="coordTxt">
                     <h2
                       data-sal="slide-up"
                       data-sal-delay="500"
                       data-sal-duration="900" 
                       data-sal-easing="ease">
-                        Coordonnées
+                        NOS COORDONNÉES
                     </h2>
-                    <p >A venir</p>
+                    <div className="contactH2Bot"></div>
+                    <ul>
+                      <li>A venir</li>
+                      <li>A venir</li>
+                      <li>A venir</li>
+                      <li>A venir</li>
+                    </ul>
+
                   </div>
                   <Map id="contactMap" center={position} zoom={15} style={{width: "50%", height: "250px" }} >
                     <TileLayer
@@ -73,95 +80,85 @@ const Index = (props) => {
                       </Popup>
                     </Marker>
                   </Map>
-                </div>   
-                <form
-                  id="contactForm"
-                  name="contact"
-                  method="post"
-                  action="/contact/thanks/"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
-                  onSubmit={handleSubmit}
-                >
-                  {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                  <input type="hidden" name="form-name" value="contact" />
-                  <div hidden>
-                    <label>
-                      Don’t fill this out:{' '}
-                      <input name="bot-field" onChange={handleChange} />
-                    </label>
+                </section>   
+                <div id="contctSep"></div>
+                <section id="contact">
+                  <div id="contactLogo">
+                    <img src={logo} alt="icarus_tattoo"/>
                   </div>
-                  <div className="field">
-                    <label 
-                      className="label" 
-                      htmlFor={'name'}
+                  <form
+                    id="contactForm"
+                    name="contact"
+                    method="post"
+                    action="/contact/thanks/"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
+                    onSubmit={handleSubmit}
+                  >
+                    <h2
                       data-sal="slide-up"
                       data-sal-delay="500"
                       data-sal-duration="900" 
                       data-sal-easing="ease">
-                        Nom
-                    </label>
-                    <div className="control">
-                      <input
-                        className="input"
-                        type={'text'}
-                        name={'name'}
-                        onChange={handleChange}
-                        id={'name'}
-                        required={true}
-                      />
+                      BESOIN D’UN RENSEIGNEMENT ?
+                    </h2>
+                    <div className="contactH2Bot"></div>
+                    {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+                    <input type="hidden" name="form-name" value="contact" />
+                    <div hidden>
+                      <label>
+                        Don’t fill this out:{' '}
+                        <input name="bot-field" onChange={handleChange} />
+                      </label>
                     </div>
-                  </div>
-                  <div className="field">
-                    <label 
-                    className="label" 
-                    htmlFor={'email'}
-                    data-sal="slide-up"
-                    data-sal-delay="500"
-                    data-sal-duration="900" 
-                    data-sal-easing="ease">
-                     Adresse mail
-                    </label>
-                    <div className="control">
-                      <input
-                        className="input"
-                        type={'email'}
-                        name={'email'}
-                        onChange={handleChange}
-                        id={'email'}
-                        required={true}
-                      />
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input is-small"
+                          type={'text'}
+                          name={'name'}
+                          onChange={handleChange}
+                          placeholder="Nom"
+                          id={'name'}
+                          required={true}
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className="field">
-                    <label 
-                    className="label" 
-                    htmlFor={'message'}
-                    data-sal="slide-up"
-                    data-sal-delay="500"
-                    data-sal-duration="900" 
-                    data-sal-easing="ease">
-                      Message
-                    </label>
-                    <div className="control">
-                      <textarea
-                        className="textarea"
-                        name={'message'}
-                        onChange={handleChange}
-                        id={'message'}
-                        required={true}
-                      />
+                    <div className="field">
+                      <div className="control">
+                        <input
+                          className="input is-small"
+                          type={'email'}
+                          name={'email'}
+                          onChange={handleChange}
+                          placeholder="Mail"
+                          id={'email'}
+                          required={true}
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div className="field">
-                    <button className="button is-link" type="submit">
-                      Envoyer
-                    </button>
-                  </div>
-                </form>
+                    <div className="field">
+                        <div className="control">
+                        <textarea
+                          className="textarea"
+                          name={'message'}
+                          onChange={handleChange}
+                          placeholder="Message"
+                          id={'message'}
+                          required={true}
+                        />
+                      </div>
+                    </div>
+                    <div className="field">
+                      <button className="button is-link" type="submit">
+                        Envoyer
+                      </button>
+                    </div>
+                  </form>
+                </section>
               </div>
             </div>
-          </section>
+          </div>
         </Layout>
       )
     }
