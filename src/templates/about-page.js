@@ -5,7 +5,12 @@ import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
 import "../Style/aboutPage.css";
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const AboutPageTemplate = ({ 
+  image,
+  title, 
+  content, 
+  contentComponent 
+}) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -39,6 +44,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 };
 
 AboutPageTemplate.propTypes = {
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
@@ -50,6 +56,7 @@ const AboutPage = ({ data }) => {
   return (
     <Layout>
       <AboutPageTemplate
+        image={frontmatter.image}
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
@@ -59,7 +66,11 @@ const AboutPage = ({ data }) => {
 };
 
 AboutPage.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
+  }),
 };
 
 export default AboutPage
@@ -70,6 +81,13 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

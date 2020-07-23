@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { navigate } from 'gatsby-link';
 import Layout from '../../components/Layout';
 import { Map,TileLayer, Marker, Popup } from 'react-leaflet';
-// import Content, { HTMLContent } from '../../components/Content';
+import gsap from 'gsap'
 import "../../Style/contact.css";
 
 
@@ -35,7 +35,9 @@ const Index = (props) => {
       .catch((error) => alert(error))
   }
  
-     const position = [44.85402, -0.598465];
+  const position = [44.85402, -0.598465];
+
+
 
     if (typeof window !== 'undefined') {
       return (
@@ -46,7 +48,8 @@ const Index = (props) => {
                 <h1 
                 data-sal="slide-up"
                 data-sal-duration="900" 
-                data-sal-easing="ease">
+                data-sal-easing="elastic"
+                >
                   Contactez nous !</h1> 
                 <div id="coord">
                   <div id="coordTxt">
@@ -89,8 +92,14 @@ const Index = (props) => {
                     </label>
                   </div>
                   <div className="field">
-                    <label className="label" htmlFor={'name'}>
-                      Nom
+                    <label 
+                      className="label" 
+                      htmlFor={'name'}
+                      data-sal="slide-up"
+                      data-sal-delay="500"
+                      data-sal-duration="900" 
+                      data-sal-easing="ease">
+                        Nom
                     </label>
                     <div className="control">
                       <input
@@ -104,7 +113,13 @@ const Index = (props) => {
                     </div>
                   </div>
                   <div className="field">
-                    <label className="label" htmlFor={'email'}>
+                    <label 
+                    className="label" 
+                    htmlFor={'email'}
+                    data-sal="slide-up"
+                    data-sal-delay="500"
+                    data-sal-duration="900" 
+                    data-sal-easing="ease">
                      Adresse mail
                     </label>
                     <div className="control">
@@ -119,7 +134,13 @@ const Index = (props) => {
                     </div>
                   </div>
                   <div className="field">
-                    <label className="label" htmlFor={'message'}>
+                    <label 
+                    className="label" 
+                    htmlFor={'message'}
+                    data-sal="slide-up"
+                    data-sal-delay="500"
+                    data-sal-duration="900" 
+                    data-sal-easing="ease">
                       Message
                     </label>
                     <div className="control">
