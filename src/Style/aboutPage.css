@@ -22,3 +22,12 @@
   background-color: ivory;
   color: darkslategray;
 }
+
+/*========================= DESCKTOP (media queries)_======================*/
+
+@media screen and (min-width: 1000px){
+
+  #aboutBody {
+    padding: 3% 15%;
+  }
+}

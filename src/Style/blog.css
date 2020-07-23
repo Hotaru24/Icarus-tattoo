@@ -8,8 +8,8 @@
     position: relative;
     min-height: 250px;
     overflow: hidden;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin-bottom: 0;
  }
 
@@ -21,7 +21,6 @@
 
 #mainBlogBody{
   background-color: ivory;
-  padding-top: 7%;
 }
 
 
@@ -32,7 +31,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  padding-top: 0%;
 }
 .columns is-multiline{
   display: flex;
