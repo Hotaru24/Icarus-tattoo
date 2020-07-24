@@ -50,8 +50,8 @@ const Index = (props) => {
         trigger: "#contactLogo",
         toggleActions: "restart reverse",
       },
-      y: 50,
-      duration:15,
+      y: -50,
+      duration:10,
       ease: "elastic"
     })
   })
