@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
-import { navigate } from 'gatsby-link';
+import React, { useState, useEffect } from 'react';
+import {navigate} from 'gatsby-link';
 import Layout from '../../components/Layout';
 import { Map,TileLayer, Marker, Popup } from 'react-leaflet';
-import logo from "../../img/logo2.jpg"
+import  {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+import logo from "../../img/logoT.png";
 import "../../Style/contact.css";
 
 
@@ -14,6 +16,7 @@ const encode = (data) => {
 
 const Index = (props) => {
 
+  //-----------------_Form_--------------------
   const [isvalidated, setisvalidated] = useState(false);
 
   const handleChange = (e) => {
@@ -34,9 +37,24 @@ const Index = (props) => {
       .then(() => navigate(form.getAttribute('action')))
       .catch((error) => alert(error))
   }
- 
-  const position = [44.85402, -0.598465];
 
+  //------------------_Map_---------------------
+  const position = [44.85420, -0.598400];
+  
+  //------------------_gsap_---------------------
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    gsap.to("#contactLogo", {
+      scrollTrigger:{
+        trigger: "#contactLogo",
+        toggleActions: "restart reverse",
+      },
+      y: 50,
+      duration:15,
+      ease: "elastic"
+    })
+  })
 
 
     if (typeof window !== 'undefined') {

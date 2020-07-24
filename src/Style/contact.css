@@ -76,11 +76,11 @@
 }
 
 #contactPage .button.is-link {
-  background-color: lightslategray;
+  background-color:  #525252;
   width: 80%;
 }
 #contactPage .button.is-link:hover {
-  background-color: lightgrey;
+  background-color: lightslategray;
 }
 /*========================= TABLET (media queries)_======================*/
 
@@ -88,10 +88,14 @@
 
   #contactPage {
     margin: 6%;
-    padding: 3% 3% 3% 0% !important;
+    padding: 3% 5% 5% 0% !important;
     border-style: darkgray;
     box-shadow: 0 0 45px 0
     rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  #contactPage h1 {
+    margin-left: 5%;
   }
 
   #coordTxt{
@@ -118,11 +122,13 @@
 
   #contactLogo{
     display: unset;
+    filter: invert(0.2);
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-right: 20px;
+    padding-bottom: 60px;
   }
 
   #contactLogo img{
