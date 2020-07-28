@@ -32,6 +32,7 @@ const Navbar = () => {
             {/* Hamburger menu */}
             <div
               className={`navbar-burger burger ${navBarActiveClass}`}
+              role = "menu"
               data-target="navMenu"
               onClick={() => toggleHamburger()}
             >
@@ -48,17 +49,17 @@ const Navbar = () => {
               <AniLink className="navbar-item" fade to="/about">
               A propos
               </AniLink>
-              <AniLink fade className="navbar-item" fade to="/gallery">
+              <AniLink className="navbar-item" fade to="/gallery">
                 Réalisations
               </AniLink>
-              <AniLink fade className="navbar-item" fade to="/blog">
+              <AniLink className="navbar-item" fade to="/blog">
                 Actu
               </AniLink>
-              <AniLink fade className="navbar-item" fade to="/contact">
+              <AniLink className="navbar-item" fade to="/contact">
                 Contact
               </AniLink>
             </div>
-    fade       </div>
+          </div>
         </div>
       </nav>
     )
