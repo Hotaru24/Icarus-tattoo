@@ -1,27 +1,29 @@
 .navbar .navbar-menu {
-  box-shadow:none !important
+  box-shadow:none !important;
 }  
 
 .navbar-burger  {
-  color: white !important
+  color: white !important;
 }    
 
 .navbar {
-  background-color: #383232 !important
+  background-color: #383232 !important;
 }  
   
 .navbar-burger {
-  background-color: #383232 !important
+  background-color: #383232 !important;
 }
 
 .navbar-item {
-  color: dimgray !important 
+  color: dimgray !important;
+  font-family: "Kreon", "Trebuchet MS", "Verdana";
+  font-size: 1.15em;
 }
 
 #navMenu .navbar-item:hover {
   color: gainsbo !important;
   transform: scale(1.075);
-  transition-duration: 0.5s;
+  transition-duration: 0.25s;
 }
 
 
@@ -34,12 +36,10 @@
   }
 
   .navbar-item {
-    color: gainsboro !important 
+    color: gainsboro !important;
   }
 
   #navMenu .navbar-item:hover {
     color: white !important;
-    transform: scale(1.075);
-    transition-duration: 0.5s;
   }
 }

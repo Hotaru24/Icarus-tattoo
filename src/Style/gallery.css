@@ -53,14 +53,11 @@
   pointer-events:none;
   z-index:4;
   transition: .3s ease-in-out;
-  -webkit-backdrop-filter: blur(1.5px) ;
-  backdrop-filter: blur(1px) ;
-  border-radius: 100%;
 }
 
 .gallery-item:hover .text{
   opacity:1;
-  animation: move-down .3s linear;
+  animation: move-down .65s linear;
   padding:1em;
   width:100%;
 }

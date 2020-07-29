@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {navigate} from 'gatsby-link';
 import Layout from '../../components/Layout';
-import { Map,TileLayer, Marker, Popup } from 'react-leaflet';
-import  {gsap} from "gsap";
-import {ScrollTrigger} from "gsap/ScrollTrigger";
 import logo from "../../img/logoT.png";
 import "../../Style/contact.css";
 
@@ -38,24 +35,6 @@ const Index = (props) => {
       .catch((error) => alert(error))
   }
 
-  //------------------_Map_---------------------
-  const position = [44.85420, -0.598400];
-  
-  //------------------_gsap_---------------------
-  gsap.registerPlugin(ScrollTrigger);
-
-  useEffect(() => {
-    gsap.to("#contactLogo", {
-      scrollTrigger:{
-        trigger: "#contactLogo",
-        toggleActions: "restart reverse",
-      },
-      y: -50,
-      duration:10,
-      ease: "elastic"
-    })
-  })
-
 
     if (typeof window !== 'undefined') {
       return (
@@ -70,6 +49,9 @@ const Index = (props) => {
                 >
                   Contactez-nous </h1> 
                 <section id="coord">
+                <div id="coordLogo">
+                    <img src={logo} alt="icarus_tattoo"/>
+                </div>
                   <div id="coordTxt">
                     <h2
                       data-sal="slide-up"
@@ -87,23 +69,9 @@ const Index = (props) => {
                     </ul>
 
                   </div>
-                  <Map id="contactMap" center={position} zoom={15} style={{width: "50%", height: "250px" }} >
-                    <TileLayer
-                      attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                    /> 
-                    <Marker position={position}>
-                      <Popup>
-                        Icarus_tattoo 
-                      </Popup>
-                    </Marker>
-                  </Map>
                 </section>   
                 <div id="contctSep"></div>
                 <section id="contact">
-                  <div id="contactLogo">
-                    <img src={logo} alt="icarus_tattoo"/>
-                  </div>
                   <form
                     id="contactForm"
                     name="contact"

@@ -1,10 +1,18 @@
-
 #contactPage {
+  width: 100vw;
+}
+
+#contactPage .container{
   display: flex;
   justify-content: center;
   color: darkslategray;
   margin: 4%;
 }
+
+#contactPage .container .content{
+width: 100%;
+}
+
 #contactPage h1 {
   display: flex;
   justify-content: center;
@@ -25,10 +33,6 @@
   border-bottom-width: 1px;
   margin-left: 10px;
   margin-bottom: 20px;
-}
-
-#contactMap{
-  display: none;
 }
 
 #coord{
@@ -60,7 +64,7 @@
   align-items: center;
 }
 
-#contactLogo{
+#coordLogo{
   display: none;
 }
 
@@ -78,17 +82,20 @@
 #contactPage .button.is-link {
   background-color:  #525252;
   width: 80%;
+  margin-top: 15px;
 }
 #contactPage .button.is-link:hover {
   background-color: lightslategray;
 }
+
+
 /*========================= TABLET (media queries)_======================*/
 
 @media screen and (min-width: 750px){
 
-  #contactPage {
+  #contactPage .container{
     margin: 6%;
-    padding: 3% 5% 5% 0% !important;
+    padding: 3% 0 5% 0% !important;
     border-style: darkgray;
     box-shadow: 0 0 45px 0
     rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -100,43 +107,33 @@
 
   #coordTxt{
     width: 50%;
-    padding-left: 10%;
+    padding-top: 4%;
   }
 
   #coordTxt ul{
     margin-right: 20%;
   }
 
-  #contactMap{
-    display: unset;
-  }
-
-  .leaflet-container .leaflet-retina .leaflet-fade-anim .leaflet-grab .leaflet-touch-drag {
-    width: 80% !important;
-    height: 250px !important;
-  }
-
   #contact{
     justify-content: space-around;
   }
 
-  #contactLogo{
+  #coordLogo{
     display: unset;
     filter: invert(0.2);
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-right: 20px;
-    padding-top: 60px;
+    padding-top: 55px;
   }
 
-  #contactLogo img{
+  #coordLogo img{
     width: 250px;
   }
 
   #contactForm{
-    width: 50%;
+    width: 70%;
   }
 
 }
@@ -145,7 +142,7 @@
 
 @media screen and (min-width: 1000px){
 
-  #contactPage {
+  #contactPage .container{
     margin: 6% 17%;
   }
 

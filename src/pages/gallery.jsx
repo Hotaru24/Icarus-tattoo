@@ -24,15 +24,9 @@ export const pageQuery = graphql`
       }
     }
   }`
+  
 
 const Gallery = (props) => {
-
-  // const [modal, setmodal] = useState("none");
-
-  // const toggleModal = () => {
-  //   modal === "block" ? setmodal("none") : setmodal("block")    
-  // };
-
 
   return (
     <Layout>

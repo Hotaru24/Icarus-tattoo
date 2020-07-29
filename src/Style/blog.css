@@ -1,4 +1,20 @@
-/*------------------_BlogPage_-------------------*/
+
+
+#blogHeader h1, 
+#mainBlogBody h1, 
+#blogRollBody h1, 
+#blogPostBody h1, 
+#blogHeader h2, 
+#mainBlogBody h2, 
+#blogRollBody h2, 
+#blogRollBody a,
+#blogPostBody h2 {
+  font-family: "Kreon", "Trebuchet MS", "Verdana";
+}
+
+
+/*====================_BlogPage_====================*/
+
 #blogHeader {
     background-image: url('../../public/img/blogCover.jpg');
     filter: sepia(1);
@@ -24,7 +40,7 @@
 }
 
 
-/*------------------_BlogRoll_-------------------*/
+/*====================_BlogRoll_====================*/
 
 #blogRollBody{
   display: flex;
@@ -32,7 +48,19 @@
   justify-content: center;
   align-items: center;
   padding-top: 0%;
+  color: darkslategray !important;
+
 }
+
+#blogRollBody a{
+  color: darkslategray !important;
+  text-decoration: none;
+}
+
+#blogRollBody a:hover{
+  color: rgb(153, 151, 151) !important;
+}
+
 .columns is-multiline{
   display: flex;
   flex-direction: column;
@@ -40,13 +68,32 @@
 }
 .blogList{
   margin: 15px 0;
-  width: 75vw;
+  width: 65vw;
 }
 
 
-/*------------------_BlogPost_-------------------*/
+/*====================_BlogPost_====================*/
 
 #blogPostBody{
+  padding: 5% 7%;
   background-color: ivory;
   color: darkslategray;
 }
+
+/*--TABLET (media queries)--*/
+
+@media screen and (min-width: 750px){
+  #blogPostBody{
+    padding: 7% 15%;
+  }
+}
+
+/*--DESKTOP (media queries)--*/
+
+@media screen and (min-width: 1000px){
+  #blogPostBody{
+    padding: 7% 20%;
+  }
+}
+
+

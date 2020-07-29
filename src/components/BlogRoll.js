@@ -6,8 +6,8 @@ import "../Style/blog.css";
 
 const BlogRoll = (props) => {
 
-    const { data } = props
-    const { edges: posts } = data.allMarkdownRemark
+    const { data } = props;
+    const { edges: posts } = data.allMarkdownRemark;
 
     return (
       <div id="blogRollBody" className="columns is-multiline">
@@ -42,7 +42,7 @@ const BlogRoll = (props) => {
                       {post.frontmatter.title}
                     </Link>
                     <span> &bull; </span>
-                    <span className="subtitle is-size-5 is-block">
+                    <span className="subtitle is-size-6 is-block">
                       {post.frontmatter.date}
                     </span>
                   </p>
