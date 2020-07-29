@@ -6,14 +6,11 @@
   color: white !important;
 }    
 
-.navbar {
+.navbar,
+.navbar-burger {
   background-color: #383232 !important;
 }  
   
-.navbar-burger {
-  background-color: #383232 !important;
-}
-
 .navbar-item {
   color: dimgray !important;
   font-family: "Kreon", "Trebuchet MS", "Verdana";
@@ -27,7 +24,7 @@
 }
 
 
-/*========================= DESCKTOP (media queries)_======================*/
+/*========================= TADESCKTOP (media queries)_======================*/
 
 @media screen and (min-width: 1023px){
 

@@ -1,33 +1,37 @@
-#gatsby-focus-wrapper{
-  height: 100vh;
-}
-
-#homeBody{
+#indexBody{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-image: url("../../static/img/homeBackground.jpg");
-  background-size: cover;
-  z-index: 1;
 }
 
-#homeNav{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-  position: relative;
-  bottom: 500px;
+#indexBody section{
+ width: 50%;
+ height: 100vh;
 }
 
-.homeNavLink{
-  color: ivory;
-  margin: 0 10px;
-  font-size: 1.25em;
+#indexBody .navbar,
+#indexBody .navbar-burger{
+  background-color: #383232 !important;
 }
+/*=========================_TABLET (media queries)_======================*/
 
-#homeLogo{
-  width: 200px;
-  filter: invert(0.05);
+@media screen and (min-width: 750px){
+  
+
+  #indexBody #navMenu{
+    display: flex;
+    justify-content: center !important;
+  }
+
+
+}
+/*=========================_TABLET & DESKTOP (media queries)_======================*/
+
+@media screen and (min-width: 1023px){
+  
+
+  #indexBody .navbar,
+  #indexBody .navbar-burger{
+    background-color: transparent !important;
+  }
+
+
 }

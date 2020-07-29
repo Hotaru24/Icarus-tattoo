@@ -21,7 +21,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
       scrollTrigger:{
         trigger: "#img1",
         start: "top 15%",
-        end: "bottom 20%",
+        end: "bottom 40%",
         toggleActions: "restart reverse",
       },
       y: 55,
@@ -44,7 +44,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
     gsap.to("#img3", {
       scrollTrigger:{
         trigger: "#img3",
-        start: "top 20%",
+        start: "top 50%",
         toggleActions: "restart reverse",
       },
       rotation: 360,
