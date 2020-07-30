@@ -5,10 +5,10 @@ import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
 import  {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
-import soulignement from "../../public/img/soulignement.png";
-import img1 from "../../public/img/aboutImg1.png";
-import img2 from "../../public/img/aboutImg2.png";
-import img3 from "../../public/img/aboutImg3.png";
+import soulignement from "../../src/img/soulignement.png";
+import img1 from "../../src/img/aboutImg1.png";
+import img2 from "../../src/img/aboutImg2.png";
+import img3 from "../../src/img/aboutImg3.png";
 import "../Style/aboutPage.css";
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
