@@ -21,10 +21,11 @@ const Index = () => {
 
   return (
     <div id="indexBody">
-      <section style={{backgroundColor: "blue"}}>
+      <section className="indexSection">
         <img src={logo}/>
+        
       </section>
-      <section style={{backgroundColor: "green"}}>
+      <section className="indexSection">
         <nav
           className="navbar is-transparent"
           role="navigation"
@@ -49,15 +50,15 @@ const Index = () => {
               id="navMenu"
               className={`navbar-menu ${navBarActiveClass}`}
             >
-              <div className="navbar-start has-text-centered">
+              <div className="navbar has-text-centered">
                 <AniLink className="navbar-item" fade to="/about">
                 A propos
                 </AniLink>
                 <AniLink className="navbar-item" fade to="/gallery">
-                  Réalisations
+                  Book
                 </AniLink>
                 <AniLink className="navbar-item" fade to="/blog">
-                  Actu
+                  News
                 </AniLink>
                 <AniLink className="navbar-item" fade to="/contact">
                   Contact
@@ -66,6 +67,7 @@ const Index = () => {
             </div>
           </div>
         </nav>
+        <div id="homeFont"/>        
       </section>
     </div>
   )

@@ -93,7 +93,11 @@ width: 100%;
 
 @media screen and (min-width: 750px){
 
-
+#contactPage{
+  background-image: url(https://cdn.pixabay.com/photo/2018/04/05/09/03/zeppelin-3292242_960_720.jpg);
+  
+  background-size: cover;
+}
   #contactPage .container{
     margin: 6%;
     padding: 3% 0 5% 0% !important;

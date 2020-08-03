@@ -2,23 +2,56 @@
   display: flex;
 }
 
-#indexBody section{
- width: 50%;
- height: 100vh;
+#indexBody .navbar a:hover,
+#indexBody .navbar-burger a:hover{
+  color: black !important;
 }
 
-#indexBody .navbar,
-#indexBody .navbar-burger{
-  background-color: #383232 !important;
-}
 /*=========================_TABLET (media queries)_======================*/
 
 @media screen and (min-width: 750px){
-  
+
+
+  #indexBody .navbar{
+    padding-top: 1vh;
+    background-color: #383232 !important;
+    color: black !important;
+  }
+
+  #indexBody .navbar a{
+    color: #383232 !important;
+    font-size: 1.5em;
+    margin: 0 10px 0 10px;
+  }
 
   #indexBody #navMenu{
     display: flex;
     justify-content: center !important;
+  }
+
+  .indexSection:first-child {
+    background-image: url(https://image.freepik.com/photos-gratuite/design-fond-texture-simple-noir_53876-63595.jpg);
+    /* background-color: #383232; */
+    background-size: cover !important;
+    background-repeat: no-repeat;background-position: center;
+    width: 40%;
+    height: 100vh;
+  }
+
+  .indexSection:last-child {
+    width: 60%;
+    height: 100vh;
+  }
+
+  .indexSection:first-child img{
+    width: 300px;
+  }
+
+  #homeFont{
+    background-image: url(../img/homePicture.gif);
+    background-size: contain !important;
+    background-repeat: no-repeat;background-position: center;
+    height: 92vh;    
   }
 
 
