@@ -33,12 +33,13 @@
   object-fit: cover;
   object-position:50% 50%;
   cursor:pointer;
+  filter: grayscale(1);
   transition: 1.25s ease-in-out !important;
 }
 
 .gallery-item:hover .gatsby-image-wrapper img{
   transform:scale(1.5);
-  filter: brightness(0.65);
+  filter: grayscale(1) brightness(0.65);
 }
 
 .gallery-item .text{

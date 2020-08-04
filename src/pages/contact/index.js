@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {navigate} from 'gatsby-link';
 import Layout from '../../components/Layout';
 import logo from "../../img/logoT.png";
+import soulignement from "../../img/soulignement.png";
 import "../../Style/contact.css";
 
 
@@ -42,12 +43,15 @@ const Index = (props) => {
           <div id="contactPage" className="section">
             <div className="container">
               <div className="content">
-                <h1 
-                data-sal="slide-up"
-                data-sal-duration="900" 
-                data-sal-easing="elastic"
-                >
-                  Contactez-nous </h1> 
+                <div id="contactPageTitle">
+                  <h1 
+                  data-sal="slide-up"
+                  data-sal-duration="900" 
+                  data-sal-easing="elastic"
+                  >
+                    Contactez-nous </h1> 
+                  <img id="soulignement" src={soulignement} alt=""/>
+                </div>
                 <section id="coord">
                 <div id="coordLogo">
                     <img src={logo} alt="icarus_tattoo"/>

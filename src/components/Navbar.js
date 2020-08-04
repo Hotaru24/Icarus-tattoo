@@ -50,10 +50,10 @@ const Navbar = () => {
               A propos
               </AniLink>
               <AniLink className="navbar-item" fade to="/gallery">
-                Réalisations
+                Book
               </AniLink>
               <AniLink className="navbar-item" fade to="/blog">
-                Actu
+                News
               </AniLink>
               <AniLink className="navbar-item" fade to="/contact">
                 Contact
