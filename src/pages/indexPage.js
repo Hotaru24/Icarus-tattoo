@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-//import Navbar from "../components/Navbar";
+import Navbar from '../components/Navbar';
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import logo from "../img/logoN.png";
 import soulignement from "../img/soulignement.png";
@@ -21,12 +21,12 @@ const Index = () => {
   );
 
   return (
-    <div id="indexBody">
+     <div id="indexBody">
       <section className="indexSection">
         <img id="homeLogo" src={logo}/>
         <img id="homeSoulignement" src={soulignement} alt=""/>
         <h2>Artiste tatoueur - Bordeaux</h2>
-        <AniLink  swipe top="exit" to="/about" duration={2}>
+        <AniLink  paintDrip top="exit" to="/about" duration={0.75} color="black">
           <div class="bttn bttn-two">
             <span>Découvrir</span>
           </div>
@@ -58,16 +58,16 @@ const Index = () => {
               className={`navbar-menu ${navBarActiveClass}`}
             >
               <div className="navbar has-text-centered">
-                <AniLink className="navbar-item" swipe top="exit" to="/about" duration={2}>
+                <AniLink className="navbar-item" swipe  to="/about" duration={1.25}>
                 A propos
                 </AniLink>
-                <AniLink className="navbar-item" swipe top="exit" to="/gallery" duration={2}>
+                <AniLink className="navbar-item" swipe  to="/gallery" duration={1.25}>
                   Book
                 </AniLink>
-                <AniLink className="navbar-item" swipe top="exit" to="/blog" duration={2}>
+                <AniLink className="navbar-item" swipe  to="/blog" duration={1.25}>
                   News
                 </AniLink>
-                <AniLink className="navbar-item" swipe top="exit" to="/contact" duration={2}>
+                <AniLink className="navbar-item" swipe  to="/contact" duration={1.25}>
                   Contact
                 </AniLink>
               </div>

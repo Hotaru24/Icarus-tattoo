@@ -1,5 +1,6 @@
 #indexBody{
   display: flex;
+  flex-direction: column-reverse;
 }
 
 #indexBody .navbar a:hover,
@@ -17,7 +18,6 @@
 /*=========================_TABLET (media queries)_======================*/
 
 @media screen and (min-width: 750px){
-
 
   #indexBody .navbar{
     padding-top: 1vh;
@@ -38,7 +38,7 @@
 
   .indexSection:first-child {
     background-image: url(https://image.freepik.com/photos-gratuite/design-fond-texture-simple-noir_53876-63595.jpg);
-    /* background-color: #383232; */
+    background-color: #201c1c;
     background-size: cover !important;
     background-repeat: no-repeat;background-position: center;
     width: 40%;
@@ -136,24 +136,26 @@
     filter: invert(1);
   }
 
-  #homeFont{
-    background-image: url(../img/homePicture.gif);
-    background-size: contain !important;
-    background-repeat: no-repeat;background-position: center;
-    height: 92vh;    
-  }
-
 
 }
 /*=========================_TABLET & DESKTOP (media queries)_======================*/
 
 @media screen and (min-width: 1023px){
   
+  #indexBody{
+    flex-direction: row;
+  }
 
   #indexBody .navbar,
   #indexBody .navbar-burger{
     background-color: transparent !important;
   }
 
+  #homeFont{
+    background-image: url(../img/homePicture.gif);
+    background-size: contain !important;
+    background-repeat: no-repeat;background-position: center;
+    height: 92vh;    
+  }
 
 }

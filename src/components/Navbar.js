@@ -46,16 +46,16 @@ const Navbar = () => {
             className={`navbar-menu ${navBarActiveClass}`}
           >
             <div className="navbar-start has-text-centered">
-              <AniLink className="navbar-item" fade to="/about">
+              <AniLink className="navbar-item" fade to="/about" duration={1}>
               A propos
               </AniLink>
-              <AniLink className="navbar-item" fade to="/gallery">
+              <AniLink className="navbar-item" fade to="/gallery" duration={1}>
                 Book
               </AniLink>
-              <AniLink className="navbar-item" fade to="/blog">
+              <AniLink className="navbar-item" fade to="/blog" duration={1}>
                 News
               </AniLink>
-              <AniLink className="navbar-item" fade to="/contact">
+              <AniLink className="navbar-item" fade to="/contact" duration={1}>
                 Contact
               </AniLink>
             </div>
