@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import Navbar from '../components/Navbar';
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import logo from "../img/logoN.png";
 import soulignement from "../img/soulignement.png";
