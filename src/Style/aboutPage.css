@@ -25,11 +25,9 @@
   padding: 1rem;
 }
 
-#aboutLeft,
 #aboutRight{
  display: none;
 }
-
 
 #aboutBody {
   color: darkslategray;
@@ -54,42 +52,19 @@
 
 /*========================= DESCKTOP (media queries)_======================*/
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 1023px){
 
   #aboutContainer{
     display: grid;
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 65% 35%;
     grid-template-rows: max-content;
     grid-template-areas:
-      "margeLeft body margeRight";
+      "body margeRight";
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  #aboutLeft{
-    display: unset;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 4% 4%;
-    margin: 0 2%;
-    grid-area: "margeLeft";
-  }
-
-  #aboutLeft img:first-child{
-    margin-bottom: 110px;
-    width: 200px;  
-    height: 220px;  
-  }
-
-  #aboutLeft img:last-child{
-    margin-top: 90px;
-    width: 80px;
-    height: 120px;  
+    margin: 0 7%
   }
 
   #aboutRight{
@@ -103,8 +78,8 @@
   }
 
   #aboutRight img {
-    height: 450px;
-    width: 350px;
+    height: 550px;
+    width: 325px;
   }
 
   #aboutBody {

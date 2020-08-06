@@ -53,10 +53,6 @@ const Index = (props) => {
                   <img id="soulignement" src={soulignement} alt=""/>
                 </div>
                 <section id="coord">
-                <div id="coordLogo">
-                    <img src={logo} alt="icarus_tattoo"/>
-                </div>
-                  <div id="coordTxt">
                     <h2
                       data-sal="slide-up"
                       data-sal-delay="500"
@@ -71,8 +67,6 @@ const Index = (props) => {
                       <li>A venir</li>
                       <li>A venir</li>
                     </ul>
-
-                  </div>
                 </section>   
                 <div id="contctSep"></div>
                 <section id="contact">
@@ -104,7 +98,7 @@ const Index = (props) => {
                     <div className="field">
                       <div className="control">
                         <input
-                          className="input is-small"
+                          className="input"
                           type={'text'}
                           name={'name'}
                           onChange={handleChange}
@@ -117,7 +111,7 @@ const Index = (props) => {
                     <div className="field">
                       <div className="control">
                         <input
-                          className="input is-small"
+                          className="input"
                           type={'email'}
                           name={'email'}
                           onChange={handleChange}

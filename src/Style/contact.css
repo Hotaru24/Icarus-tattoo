@@ -1,5 +1,6 @@
 #contactPage {
   width: 100vw;
+  background-color: ivory;
 }
 
 #contactPage .container{
@@ -44,16 +45,13 @@ width: 100%;
 }
 
 #coord{
-  display: flex;
-}
-
-#coordTxt{
-  width: 100%;
-  display: flex;
+    width: 100%;
+  display: flex;    
   align-items: start;
   flex-direction: column;
 }
-#coordTxt ul{
+
+#coord ul{
   margin-right: 30%;
   margin-top: 0 !important;
 }
@@ -106,49 +104,23 @@ width: 100%;
 
 @media screen and (min-width: 750px){
 
-#contactPage{
-  background-image: url(https://cdn.pixabay.com/photo/2018/04/05/09/03/zeppelin-3292242_960_720.jpg);
-  
-  background-size: cover;
-}
   #contactPage .container{
-    margin: 6%;
-    padding: 3% 0 5% 0% !important;
-    border-style: darkgray;
-    box-shadow: 0 0 45px 0
-    rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: ivory;
   }
 
   #contactPageTitle {
-    margin-left: 5%;
-  }
-
-  #coordTxt{
+    margin-left: 5%;    
     width: 50%;
     padding-top: 4%;
   }
 
-  #coordTxt ul{
+
+  #coord ul{
     margin-right: 20%;
   }
 
   #contact{
     justify-content: space-around;
-  }
-
-  #coordLogo{
-    display: unset;
-    filter: invert(0.2);
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 55px;
-  }
-
-  #coordLogo img{
-    width: 210px;
   }
 
   #contactForm{

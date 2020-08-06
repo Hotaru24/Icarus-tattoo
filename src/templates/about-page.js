@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
@@ -7,8 +7,6 @@ import  {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import soulignement from "../../src/img/soulignement.png";
 import img1 from "../../src/img/aboutImg1.png";
-import img2 from "../../src/img/aboutImg2.png";
-import img3 from "../../src/img/aboutImg3.png";
 import "../Style/aboutPage.css";
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
@@ -21,7 +19,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
       scrollTrigger:{
         trigger: "#img1",
         start: "top 15%",
-        end: "bottom 40%",
+        end: "bottom 60%",
         toggleActions: "restart reverse",
       },
       y: 55,
@@ -29,28 +27,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
       duration:10,
       ease: "elastic"
     })
-    gsap.to("#img2", {
-      scrollTrigger:{
-        trigger: "#img2",
-        start: "top center",
-        end: "bottom 100px",
-        toggleActions: "restart reverse",
-      },
-      y: 40,
-      x: 10,
-      duration:10,
-      ease: "elastic"
-    })
-    gsap.to("#img3", {
-      scrollTrigger:{
-        trigger: "#img3",
-        start: "top 50%",
-        toggleActions: "restart reverse",
-      },
-      rotation: 360,
-      duration:15,
-      ease: "elastic"
-    })
+
 
 
   return (
@@ -66,10 +43,6 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
       </h1>
     </header>
     <div id="aboutContainer">
-      <div id="aboutLeft">
-        <img id="img2" src={img2} alt="image2"/>
-        <img id="img3" src={img3} alt="image3"/>
-      </div>
       <section id="aboutBody" className="section section--gradient">
         <div className="container">
           <div className="columns">
