@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {navigate} from 'gatsby-link';
 import Layout from '../../components/Layout';
-import logo from "../../img/logoT.png";
+import logo from "../../img/contactPageImg.png";
 import soulignement from "../../img/soulignement.png";
 import "../../Style/contact.css";
 
@@ -53,20 +53,24 @@ const Index = (props) => {
                   <img id="soulignement" src={soulignement} alt=""/>
                 </div>
                 <section id="coord">
-                    <h2
-                      data-sal="slide-up"
-                      data-sal-delay="500"
-                      data-sal-duration="900" 
-                      data-sal-easing="ease">
-                        NOS COORDONNÉES
-                    </h2>
-                    <div className="contactH2Bot"></div>
+                  <h2
+                    data-sal="slide-up"
+                    data-sal-delay="500"
+                    data-sal-duration="900" 
+                    data-sal-easing="ease">
+                      NOS COORDONNÉES
+                  </h2>
+                  <div id="coordBody">
                     <ul>
                       <li>A venir</li>
                       <li>A venir</li>
                       <li>A venir</li>
                       <li>A venir</li>
                     </ul>
+                    <div id="contactPicture">
+                      <img src={logo}/>
+                    </div>
+                  </div>
                 </section>   
                 <div id="contctSep"></div>
                 <section id="contact">
