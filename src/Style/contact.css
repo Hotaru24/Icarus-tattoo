@@ -1,6 +1,7 @@
 #contactPage {
   width: 100vw;
   background-color: ivory;
+  font-family: "Kreon", "Trebuchet MS", "Verdana";
 }
 
 #contactPage .container{
@@ -19,21 +20,19 @@ width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 90px;
+  margin-bottom: 120px;
 }
 
 #contactPage h1 {
   display: flex;
   justify-content: center;
-  font-family: "Kreon";
   font-size: 50px;
   margin-bottom: 10px;
 }
 
 #contactPage h2 {
-  font-family: "Kreon";
   font-size: 20px;
-  margin-bottom: 10px !important;
+  margin-bottom: 25px !important;
 }
 
 .contactH2Bot{
@@ -45,7 +44,6 @@ width: 100%;
 }
 
 #coord{
-  width: 46%;
   display: flex;    
   align-items: center;
   flex-direction: column;
@@ -55,9 +53,39 @@ width: 100%;
   display: flex;
 }
 
+#contactPicture{
+  display: none;
+}
+
 #coord ul{
-  margin-right: 30%;
-  margin-top: 0 !important;
+  margin: 7% 0 7% 7% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 170px;
+  font-size: 1.5em;
+  list-style: none;
+  color: #000;
+}
+
+#coord ul li{
+  margin-bottom: 10px;
+}
+
+#coord ul li a{
+  display: flex;
+  align-items: center;
+  color: #000;
+}
+
+#coord ul li:hover{
+  transform: scale(1.1);
+  transition-duration: 0.25s;
+}
+
+#coord ul img{
+  width: 25px;
+  margin-right: 10px;
 }
 
 #contctSep{
@@ -112,13 +140,30 @@ width: 100%;
     background-color: ivory;
   }
 
+  #contactPage h2 {
+    margin-bottom: 40px !important;
+  }
+
   #contactPageTitle {
     width: 100%;
   }
 
+  #coordBody{
+    margin: 0 5% 0 5%;
+  }
 
   #coord ul{
-    margin-right: 20%;
+    margin: 7% 10% 7% 0 !important;
+    width: 240px;
+  }
+
+  #coord ul li{
+    margin-bottom: 0;
+  }
+
+  #contactPicture{
+    display: unset;
+    width: 300px;
   }
 
   #contact{
@@ -138,5 +183,13 @@ width: 100%;
   #contactPage .container{
     margin: 6% 17%;
   }
+  
+  #coord ul{
+    margin: 7% 30% 7% 0 !important;
+  }
 
+
+  #contactPicture{
+    width: 450px;
+  }
 }

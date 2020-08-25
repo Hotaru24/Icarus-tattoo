@@ -3,6 +3,9 @@ import {navigate} from 'gatsby-link';
 import Layout from '../../components/Layout';
 import logo from "../../img/contactPageImg.png";
 import soulignement from "../../img/soulignement.png";
+import facebook from '../../img/social/facebook.svg';
+import instagram from '../../img/social/instagram.svg';
+import phone from '../../img/social/phone.svg';
 import "../../Style/contact.css";
 
 
@@ -62,10 +65,31 @@ const Index = (props) => {
                   </h2>
                   <div id="coordBody">
                     <ul>
-                      <li>A venir</li>
-                      <li>A venir</li>
-                      <li>A venir</li>
-                      <li>A venir</li>
+                      <li>
+                        <a title="facebook" href="https://www.facebook.com/Icarus_tattoo-275162819748784" target="_blank" rel="noreferrer">
+                          <img
+                            src={facebook}
+                            alt="Facebook"
+                          />
+                          Facebook
+                        </a>
+                      </li>
+                      <li>
+                        <a title="instagram" href="https://www.instagram.com/icarus_tattoo/" target="_blank" rel="noreferrer">
+                          <img
+                            src={instagram}
+                            alt="Instagram"
+                          />
+                          Instagram
+                        </a>
+                      </li>
+                      <li>
+                        <img
+                          src={phone}
+                          alt="phone"
+                        />
+                        0648916550                        
+                      </li>
                     </ul>
                     <div id="contactPicture">
                       <img src={logo}/>
