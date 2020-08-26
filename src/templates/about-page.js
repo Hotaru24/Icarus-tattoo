@@ -3,30 +3,12 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
-// import  {gsap} from "gsap";
-// import {ScrollTrigger} from "gsap/ScrollTrigger";
 import soulignement from "../../public/img/soulignement.png";
 import img1 from "../../public/img/aboutImg1.png";
 import "../Style/aboutPage.css";
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
-
-  //------------------_gsap_---------------------
-  // gsap.registerPlugin(ScrollTrigger);
-
-  //   gsap.to("#img1", {
-  //     scrollTrigger:{
-  //       trigger: "#img1",
-  //       start: "top 60%",
-  //       end: "top 10%",
-  //       toggleActions: "restart reverse",
-  //     },
-  //     y: 55,
-  //     x: -5,
-  //     duration:10,
-  //     ease: "elastic"
-  //   })
 
 
   return (
