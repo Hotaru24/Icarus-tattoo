@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import logo from '../img/logoB.png';
+import logoT from '../img/logoN.png';
 import facebook from '../img/social/facebook.svg';
 import instagram from '../img/social/instagram.svg';
 import "../Style/footer.css";
@@ -9,11 +10,16 @@ import "../Style/footer.css";
 const Footer = () => {
   return (
     <footer className="footer has-background-black has-link-white has-text-white-ter">
-      <div className="content has-text-centered">
+      <div className="content has-text-centered" id="footerLogo">
         <img
           src={logo}
           alt="logo"
-          style={{ width: '11em', height: '10em', filter: "invert(20%)"}}
+          style={{ width: '20em', height: '11em', filter: "invert(20%)"}}
+        />
+        <img
+          src={logoT}
+          alt="Icarus"
+          style={{ width: '10em', height: '2.5em', filter: "invert(20%)"}}
         />
       </div>
       <div className="content has-text-centered has-background-black has-text-white-ter">

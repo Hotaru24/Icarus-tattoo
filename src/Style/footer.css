@@ -3,6 +3,14 @@
   height: 65px;
 }
 
+#footerLogo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
 .social img {
   height: 2.5em;
   width: 2.5em;
@@ -10,8 +18,7 @@
   filter: invert(80%);
 }
 
-.social img:hover {
-  
+.social img:hover {  
   transform: scale(1.2); 
   transition-duration: 0.55s;
 }
