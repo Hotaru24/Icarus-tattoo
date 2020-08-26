@@ -14,7 +14,7 @@ const Footer = () => {
         <img
           src={logo}
           alt="logo"
-          style={{ width: '20em', height: '11em', filter: "invert(20%)"}}
+          style={{ width: '19em', height: '12em', filter: "invert(20%)"}}
         />
         <img
           src={logoT}

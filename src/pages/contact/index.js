@@ -49,6 +49,7 @@ const Index = (props) => {
                 <div id="contactPageTitle">
                   <h1 
                   data-sal="slide-up"
+                  data-sal-delay="700"
                   data-sal-duration="900" 
                   data-sal-easing="elastic"
                   >
@@ -58,7 +59,7 @@ const Index = (props) => {
                 <section id="coord">
                   <h2
                     data-sal="slide-up"
-                    data-sal-delay="500"
+                    data-sal-delay="700"
                     data-sal-duration="900" 
                     data-sal-easing="ease">
                       NOS COORDONNÉES
@@ -92,7 +93,12 @@ const Index = (props) => {
                         0648916550                        
                       </li>
                     </ul>
-                    <div id="contactPicture">
+                    <div 
+                      id="contactPicture"
+                      data-sal="slide-left"
+                      data-sal-duration="1500" 
+                      data-sal-easing="elastic"
+                    >
                       <img src={logo}/>
                     </div>
                   </div>

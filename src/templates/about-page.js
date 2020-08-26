@@ -5,28 +5,28 @@ import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
 import  {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
-// import soulignement from "../../src/img/soulignement.png";
-// import img1 from "../../src/img/aboutImg1.png";
+import soulignement from "../../src/img/soulignement.png";
+import img1 from "../../src/img/aboutImg1.png";
 import "../Style/aboutPage.css";
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   //------------------_gsap_---------------------
-  // gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger);
 
-  //   gsap.to("#img1", {
-  //     scrollTrigger:{
-  //       trigger: "#img1",
-  //       start: "top 15%",
-  //       end: "bottom 60%",
-  //       toggleActions: "restart reverse",
-  //     },
-  //     y: 55,
-  //     x: -5,
-  //     duration:10,
-  //     ease: "elastic"
-  //   })
+    gsap.to("#img1", {
+      scrollTrigger:{
+        trigger: "#img1",
+        start: "top 60%",
+        end: "top 10%",
+        toggleActions: "restart reverse",
+      },
+      y: 55,
+      x: -5,
+      duration:10,
+      ease: "elastic"
+    })
 
 
 
@@ -52,7 +52,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
                   <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                     {title}              
                   </h2>
-                {/* <img src={soulignement} alt=""/> */}
+                <img src={soulignement} alt=""/>
                 </div>
                 <PageContent className="content" content={content} />
               </div>
@@ -60,9 +60,9 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
           </div>
         </div>
       </section>
-      {/* <div id="aboutRight">
+      <div id="aboutRight">
         <img id="img1" src={img1} alt="image1"/>
-      </div> */}
+      </div>
     </div>
 
   </>
