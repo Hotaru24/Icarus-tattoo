@@ -89,12 +89,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-react-leaflet',
-      options: {
-        linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
-      }
-    },  
-    {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {
           disable: false, // Flag for disabling animations

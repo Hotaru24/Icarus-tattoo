@@ -1,3 +1,8 @@
+
+.navbar-brand a{
+  padding: 0 inherit !important;
+}
+
 .navbar .navbar-menu {
   box-shadow:none !important;
 }  
@@ -28,15 +33,27 @@
 
 @media screen and (min-width: 1023px){
 
+
+  .navbar{
+    height: 4.25em;
+  }
+
+  .navbar-menu .navbar-item:first-child {
+    margin-left: 20%;
+  }
+
   .navbar-item:first-child {
-    margin-left: 50px;
+    padding: 0 inherit !important;
   }
 
   .navbar-item {
     color: gainsboro !important;
+    font-size: 1.5em;
   }
+
 
   #navMenu .navbar-item:hover {
     color: white !important;
+    background-color: transparent;
   }
 }

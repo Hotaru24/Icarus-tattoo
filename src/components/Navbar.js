@@ -6,8 +6,8 @@ import "../Style/navbar.css";
 
 const Navbar = () => {
 
-  const [active, setactive]  = useState(false);
-  const [navBarActiveClass, setnavBarActiveClass]  = useState('');
+  const [active, setactive] = useState(false);
+  const [navBarActiveClass, setnavBarActiveClass] = useState('');
 
 
   const toggleHamburger = () => {
@@ -15,12 +15,12 @@ const Navbar = () => {
   };
 
   useEffect(()=> 
-    active ?  setnavBarActiveClass('is-active') : setnavBarActiveClass('')
+    active ? setnavBarActiveClass('is-active') : setnavBarActiveClass('')
   );
  
     return (
       <nav
-        className="navbar is-transparent"
+        className="navbar"
         role="navigation"
         aria-label="main-navigation"
       >
