@@ -5,8 +5,8 @@ import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
 import  {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
-import soulignement from "../img/soulignement.png";
-import img1 from "../img/aboutImg1.png";
+import soulignement from "../../static/img/soulignement.png";
+import img1 from "../../static/img/aboutImg1.png";
 import "../Style/aboutPage.css";
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
