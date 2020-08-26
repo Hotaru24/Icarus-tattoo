@@ -1,6 +1,6 @@
 #contactPage {
   width: 100vw;
-  background-color: ivory;
+  background-color: rgb(251, 251, 245);
   font-family: "Kreon", "Trebuchet MS", "Verdana";
 }
 
@@ -46,7 +46,7 @@ width: 100%;
 #coord{
   display: flex;    
   align-items: center;
-  flex-direction: column;
+  flex-direction: column;  
 }
 
 #coordBody{
@@ -66,6 +66,10 @@ width: 100%;
   font-size: 1.5em;
   list-style: none;
   color: #000;
+}
+
+#coord ul img{
+  filter: invert(45%);
 }
 
 #coord ul li{
@@ -132,16 +136,12 @@ width: 100%;
 }
 
 
-/*========================= TABLET (media queries)_======================*/
+/*=========================_TABLET (media queries)_======================*/
 
 @media screen and (min-width: 750px){
 
-  #contactPage .container{
-    background-color: ivory;
-  }
-
   #contactPage h2 {
-    margin-bottom: 40px !important;
+    margin-bottom: 20px !important;
   }
 
   #contactPageTitle {
@@ -150,6 +150,11 @@ width: 100%;
 
   #coordBody{
     margin: 0 5% 0 5%;
+  }
+
+  #coord{
+    align-items: flex-start;
+    margin: 0 15%;
   }
 
   #coord ul{
@@ -163,7 +168,7 @@ width: 100%;
 
   #contactPicture{
     display: unset;
-    width: 300px;
+    width: 60%;
   }
 
   #contact{
@@ -176,20 +181,16 @@ width: 100%;
 
 }
 
-/*========================= DESCKTOP (media queries)_======================*/
+/*=========================_DESCKTOP (media queries)_======================*/
 
 @media screen and (min-width: 1000px){
 
   #contactPage .container{
     margin: 6% 17%;
   }
-  
+
   #coord ul{
-    margin: 7% 30% 7% 0 !important;
-  }
-
-
-  #contactPicture{
-    width: 450px;
+    margin: 7% 15% 7% 0 !important;
   }
 }
+

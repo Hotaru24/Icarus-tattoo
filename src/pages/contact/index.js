@@ -63,6 +63,7 @@ const Index = (props) => {
                     data-sal-easing="ease">
                       NOS COORDONNÉES
                   </h2>
+                  <div className="contactH2Bot"></div>
                   <div id="coordBody">
                     <ul>
                       <li>

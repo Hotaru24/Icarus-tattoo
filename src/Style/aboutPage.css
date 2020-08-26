@@ -5,9 +5,8 @@
 }
 
 #aboutCover {
-  /*background-image: url('../../public/img/about.jpg');*/
-  background-image: url(https://media.giphy.com/media/zqk39Rw9202XK/giphy.gif);
-  background-color: ivory;
+  background-image: url('../../public/img/about.jpg');
+   background-color: ivory;
   background-size: cover !important;
   -webkit-background-size: cover !important;
   background-attachment: fixed;
@@ -20,7 +19,7 @@
 }
 
 #aboutCover h1 {
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.781);
   color: white;
   padding: 1rem;
 }
