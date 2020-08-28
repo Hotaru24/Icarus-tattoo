@@ -19,7 +19,7 @@ const Footer = () => {
         <img
           src={logoT}
           alt="Icarus"
-          style={{ width: '10em', height: '2.5em', filter: "invert(20%)"}}
+          style={{ width: '10em', height: '2.9em', filter: "invert(20%)"}}
         />
       </div>
       <div className="content has-text-centered has-background-black has-text-white-ter">
