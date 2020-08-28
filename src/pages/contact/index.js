@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import {navigate} from 'gatsby-link';
 import Layout from '../../components/Layout';
 import logo from "../../img/contactPageImg.png";
@@ -99,7 +99,7 @@ const Index = (props) => {
                       data-sal-duration="1500" 
                       data-sal-easing="elastic"
                     >
-                      <img src={logo}/>
+                      <img src={logo} alt=""/>
                     </div>
                   </div>
                 </section>   

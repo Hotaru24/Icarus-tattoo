@@ -22,7 +22,7 @@ const Index = () => {
   return (
      <div id="indexBody">
       <section className="indexSection">
-        <img id="homeLogo" src={logo}/>
+        <img id="homeLogo" src={logo} alt=""/>
         <img id="homeSoulignement" src={soulignement} alt=""/>
         <h2>Artiste tatoueur - Bordeaux</h2>
         <AniLink  paintDrip top="exit" to="/about" duration={0.75} color="black">
