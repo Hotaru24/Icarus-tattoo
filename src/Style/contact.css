@@ -26,7 +26,7 @@ width: 100%;
 #contactPage h1 {
   display: flex;
   justify-content: center;
-  font-size: 50px;
+  font-size: 2.5em;
   margin-bottom: 10px;
 }
 
@@ -106,8 +106,8 @@ width: 100%;
   align-items: center;
 }
 
-#soulignement{
-  width: 180px;
+#contactPageTitle #soulignement{
+  width: 150px;
   height: 21px;
 }
 
@@ -142,12 +142,21 @@ width: 100%;
 
 @media screen and (min-width: 750px){
 
+  #contactPage h1 {
+    font-size: 3.5em;
+  }
+
   #contactPage h2 {
     margin-bottom: 20px !important;
   }
 
   #contactPageTitle {
     width: 100%;
+  }
+
+  #contactPageTitle #soulignement{
+    width: 180px;
+    height: 21px;
   }
 
   #coordBody{

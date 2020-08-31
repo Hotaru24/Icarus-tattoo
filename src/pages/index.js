@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-import logo from "../img/logoN.png";
+import logo from "../img/logoB.png";
+import logoT from "../img/logoN.png";
 import soulignement from "../img/soulignement.png";
 import "../Style/homePage.css";
 
@@ -22,7 +23,8 @@ const Index = () => {
   return (
      <div id="indexBody">
       <section className="indexSection">
-        <img id="homeLogo" src={logo} alt=""/>
+        <img id="homePictureLogo" src={logo} alt="logo"/>
+        <img id="homeLogo" src={logoT} alt=""/>
         <img id="homeSoulignement" src={soulignement} alt=""/>
         <h2>Artiste tatoueur - Bordeaux</h2>
         <AniLink  paintDrip top="exit" to="/about" duration={0.75} color="black">

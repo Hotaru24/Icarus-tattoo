@@ -3,6 +3,10 @@
   flex-direction: column-reverse;
 }
 
+#indexBody .navbar{
+  background-color: #201c1c;
+}
+
 #indexBody .navbar a,
 #indexBody .navbar-burger a{
   background-color: white;
@@ -33,10 +37,14 @@
 }
 
 .indexSection:first-child h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   font-family: "Kreon", "Trebuchet MS", "Verdana";
   color: ivory;
   margin: 40px 0 40px 0;
+}
+
+#homePictureLogo{
+ width: 80vw;
 }
 
 /*-------Button------*/
@@ -109,11 +117,11 @@
 
 
 .indexSection:first-child #homeLogo{
-  width: 400px;    
+  width: 270px;    
 }
 
 .indexSection:first-child #homeSoulignement{
-  width: 250px;
+  width: 200px;
   height: 20px;
   margin-top: 10px;
   filter: invert(1);
@@ -139,8 +147,17 @@
     width: 100%;
   }
 
+  .indexSection:first-child h2 {
+    font-size: 2em;
+   }
   
+   #homePictureLogo{
+    width: 65vw;
+  }
 
+  .indexSection:first-child #homeLogo{
+    width: 400px;    
+  }
 
 }
 /*=========================_DESKTOP (media queries)_======================*/
@@ -166,6 +183,10 @@
   .indexSection:last-child {
     width: 60%;
     height: 100vh;
+  }
+
+  #homePictureLogo{
+    display: none;
   }
 
   #homeFont{
