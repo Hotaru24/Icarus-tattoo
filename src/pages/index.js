@@ -6,6 +6,7 @@ import soulignement from "../img/soulignement.png";
 import "../Style/homePage.css";
 
 
+
 const Index = () => {
 
   const [active, setactive]  = useState(false);
@@ -20,15 +21,17 @@ const Index = () => {
     active ?  setnavBarActiveClass('is-active') : setnavBarActiveClass('')
   );
 
+
   return (
      <div id="indexBody">
+
       <section className="indexSection">
         <img id="homePictureLogo" src={logo} alt="logo"/>
         <img id="homeLogo" src={logoT} alt=""/>
         <img id="homeSoulignement" src={soulignement} alt=""/>
         <h2>Artiste tatoueur - Bordeaux</h2>
         <AniLink  paintDrip top="exit" to="/about" duration={0.75} color="black">
-          <div class="bttn bttn-two">
+          <div className="bttn bttn-two">
             <span>Découvrir</span>
           </div>
         </AniLink>
@@ -75,10 +78,13 @@ const Index = () => {
             </div>
           </div>
         </nav>
-        <div id="homeFont"/>        
+        <div id="homeFont">
+          
+        </div>       
       </section>
     </div>
   )
 };
 
 export default Index;
+
