@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Ipsum Lorem
 date: 2017-01-04T15:04:10.000Z
-description: test 1
+description: " test 1"
 featuredpost: false
 featuredimage: /img/802668.png
 tags:
