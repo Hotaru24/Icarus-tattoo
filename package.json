@@ -27,7 +27,7 @@
     "gatsby-source-instagram": "^0.8.0",
     "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.4.7",
-    "gsap": "^3.4.2",
+    "gsap": "^3.6.0",
     "jpeg-js": "^0.4.2",
     "leaflet": "^1.6.0",
     "lodash": "^4.17.19",
