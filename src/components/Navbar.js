@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'gatsby';
 import logo from '../img/logoN.png';
-import AniLink from "gatsby-plugin-transition-link/AniLink";
 import "../Style/navbar.css";
 
 const Navbar = () => {
@@ -46,18 +45,18 @@ const Navbar = () => {
             className={`navbar-menu ${navBarActiveClass}`}
           >
             <div className="navbar-start has-text-centered">
-              <AniLink className="navbar-item" fade to="/about" duration={1}>
+              <Link className="navbar-item" fade to="/about" duration={1}>
               A propos
-              </AniLink>
-              <AniLink className="navbar-item" fade to="/gallery" duration={1}>
+              </Link>
+              <Link className="navbar-item" fade to="/gallery" duration={1}>
                 Book
-              </AniLink>
-              <AniLink className="navbar-item" fade to="/blog" duration={1}>
+              </Link>
+              <Link className="navbar-item" fade to="/blog" duration={1}>
                 News
-              </AniLink>
-              <AniLink className="navbar-item" fade to="/contact" duration={1}>
+              </Link>
+              <Link className="navbar-item" fade to="/contact" duration={1}>
                 Contact
-              </AniLink>
+              </Link>
             </div>
           </div>
         </div>

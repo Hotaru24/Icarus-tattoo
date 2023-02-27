@@ -18,11 +18,11 @@ const encode = (data) => {
 const Index = (props) => {
 
   //-----------------_Form_--------------------
-  const [isvalidated, setisvalidated] = useState(false);
-
-  const handleChange = (e) => {
-    setisvalidated({ [e.target.name]: e.target.value })
-  }
+  const [contactForm, setContactForm] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -32,7 +32,7 @@ const Index = (props) => {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': form.getAttribute('name'),
-        ...isvalidated,
+        ...contactForm,
       }),
     })
       .then(() => navigate(form.getAttribute('action')))
@@ -127,7 +127,7 @@ const Index = (props) => {
                     <div hidden>
                       <label>
                         Don’t fill this out:{' '}
-                        <input name="bot-field" onChange={handleChange} />
+                        <input name="bot-field" onChange={(e) => setContactForm({...contactForm})} />
                       </label>
                     </div>
                     <div className="field">
@@ -136,7 +136,8 @@ const Index = (props) => {
                           className="input"
                           type={'text'}
                           name={'name'}
-                          onChange={handleChange}
+                          value={contactForm.name}
+                          onChange={(e) => setContactForm({...contactForm, name: e.target.value})}
                           placeholder="Nom"
                           id={'name'}
                           required={true}
@@ -149,7 +150,8 @@ const Index = (props) => {
                           className="input"
                           type={'email'}
                           name={'email'}
-                          onChange={handleChange}
+                          value={contactForm.email}
+                          onChange={(e) => setContactForm({...contactForm, email: e.target.value})}
                           placeholder="Mail"
                           id={'email'}
                           required={true}
@@ -161,7 +163,8 @@ const Index = (props) => {
                         <textarea
                           className="textarea"
                           name={'message'}
-                          onChange={handleChange}
+                          value={contactForm.message}
+                          onChange={(e) => setContactForm({...contactForm, message: e.target.value})}
                           placeholder="Message"
                           id={'message'}
                           required={true}

@@ -1,12 +1,14 @@
 ---
 templateKey: blog-post
-title: Ipsum Lorem
-date: 2017-01-04T15:04:10.000Z
-description: test
+title: Passage en studio privé
+date: 2022-01-09T15:04:10.000Z
+description: ''
 featuredpost: false
-featuredimage: /img/802668.png
+featuredimage: /img/post.jpg
 tags:
-  - test
-  - post
+  - new
+
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+A partir du 1 septembre la cours des hiboux passe en studio de tatouage privé. L'accueil ne se fera désormais que sur Rendez-vous, via instagram.
+
+A bientôt !

@@ -93,7 +93,6 @@ module.exports = {
       options: {
           disable: false, // Flag for disabling animations
       }
-    },
-    `gatsby-plugin-transition-link`,
+    }
   ],
 }

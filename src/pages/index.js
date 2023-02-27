@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import { Link } from "gatsby";
 import logo from "../img/logoB.png";
 import logoT from "../img/logoN.png";
 import soulignement from "../img/soulignement.png";
@@ -30,11 +30,11 @@ const Index = () => {
         <img id="homeLogo" src={logoT} alt=""/>
         <img id="homeSoulignement" src={soulignement} alt=""/>
         <h2>Artiste tatoueur - Bordeaux</h2>
-        <AniLink  paintDrip top="exit" to="/about" duration={0.75} color="black">
+        <Link  paintDrip top="exit" to="/about" duration={0.75} color="black">
           <div className="bttn bttn-two">
             <span>Découvrir</span>
           </div>
-        </AniLink>
+        </Link>
       </section>
       <section className="indexSection">
         <nav
@@ -62,18 +62,18 @@ const Index = () => {
               className={`navbar-menu ${navBarActiveClass}`}
             >
               <div className="navbar has-text-centered">
-                <AniLink className="navbar-item" swipe  to="/about" duration={1.25}>
+                <Link className="navbar-item" swipe  to="/about" duration={1.25}>
                 A propos
-                </AniLink>
-                <AniLink className="navbar-item" swipe  to="/gallery" duration={1.25}>
+                </Link>
+                <Link className="navbar-item" swipe  to="/gallery" duration={1.25}>
                   Book
-                </AniLink>
-                <AniLink className="navbar-item" swipe  to="/blog" duration={1.25}>
+                </Link>
+                <Link className="navbar-item" swipe  to="/blog" duration={1.25}>
                   News
-                </AniLink>
-                <AniLink className="navbar-item" swipe  to="/contact" duration={1.25}>
+                </Link>
+                <Link className="navbar-item" swipe  to="/contact" duration={1.25}>
                   Contact
-                </AniLink>
+                </Link>
               </div>
             </div>
           </div>
