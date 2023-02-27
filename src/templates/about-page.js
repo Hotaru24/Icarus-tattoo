@@ -16,17 +16,10 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
     <header 
       id="aboutCover" 
       className="full-width-image-container margin-top-0"
-      data-sal="zoom-out"
-      data-sal-delay="100"
-      data-sal-duration="1900" 
-      data-sal-easing="ease"
     >
       <h1 
       className="has-text-weight-bold is-size-1"
-      data-sal="slide-up"
-      data-sal-delay="500"
-      data-sal-duration="900" 
-      data-sal-easing="ease">
+      >
         Présentation
       </h1>
     </header>

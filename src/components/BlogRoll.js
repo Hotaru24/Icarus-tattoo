@@ -18,10 +18,6 @@ const BlogRoll = (props) => {
                 className={`blog-list-item tile is-child box notification ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
                 }`}
-                data-sal="slide-up"
-                data-sal-delay="200"
-                data-sal-duration="900" 
-                data-sal-easing="ease"
               >
                 <header>
                   {post.frontmatter.featuredimage ? (

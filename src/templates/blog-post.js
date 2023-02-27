@@ -24,10 +24,8 @@ export const BlogPostTemplate = ({
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <h1 
-            className="title is-size-2 has-text-weight-bold is-bold-light"
-            data-sal="slide-up"
-            data-sal-duration="900" 
-            data-sal-easing="ease">
+              className="title is-size-2 has-text-weight-bold is-bold-light"
+            >
               {title}
             </h1>
             <p>{description}</p>

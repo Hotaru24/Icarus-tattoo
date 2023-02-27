@@ -47,21 +47,12 @@ const Index = (props) => {
             <div className="container">
               <div className="content">
                 <div id="contactPageTitle">
-                  <h1 
-                  data-sal="slide-up"
-                  data-sal-delay="700"
-                  data-sal-duration="900" 
-                  data-sal-easing="elastic"
-                  >
+                  <h1>
                     Contactez-nous </h1> 
                   <img id="soulignement" src={soulignement} alt=""/>
                 </div>
                 <section id="coord">
-                  <h2
-                    data-sal="slide-up"
-                    data-sal-delay="700"
-                    data-sal-duration="900" 
-                    data-sal-easing="ease">
+                  <h2>
                       NOS COORDONNÉES
                   </h2>
                   <div className="contactH2Bot"></div>
@@ -93,12 +84,7 @@ const Index = (props) => {
                         0648916550                        
                       </li>
                     </ul>
-                    <div 
-                      id="contactPicture"
-                      data-sal="slide-left"
-                      data-sal-duration="1500" 
-                      data-sal-easing="elastic"
-                    >
+                    <div>
                       <img src={logo} alt=""/>
                     </div>
                   </div>
@@ -114,11 +100,7 @@ const Index = (props) => {
                     data-netlify-honeypot="bot-field"
                     onSubmit={handleSubmit}
                   >
-                    <h2
-                      data-sal="slide-up"
-                      data-sal-delay="500"
-                      data-sal-duration="900" 
-                      data-sal-easing="ease">
+                    <h2>
                       BESOIN D’UN RENSEIGNEMENT ?
                     </h2>
                     <div className="contactH2Bot"></div>

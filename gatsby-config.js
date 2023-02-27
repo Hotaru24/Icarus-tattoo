@@ -87,12 +87,6 @@ module.exports = {
       options: {
         username: `8706675137`,
       },
-    },
-    {
-      resolve: `gatsby-plugin-scroll-reveal`,
-      options: {
-          disable: false, // Flag for disabling animations
-      }
     }
   ],
 }

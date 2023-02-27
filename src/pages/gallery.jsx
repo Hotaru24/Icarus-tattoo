@@ -34,11 +34,7 @@ const Gallery = (props) => {
         <div id="galleryComponent">
           {props.data.allInstaNode.edges.map(
             (edge)=> (                  
-              <div className="gallery-container" 
-              data-sal="zoom-in"
-              data-sal-duration="900"
-              data-sal-delay="150" 
-              data-sal-easing="ease">
+              <div className="gallery-container">
                 <a href={`https://www.instagram.com/p/${edge.node.id}/`} target="_blank" rel="noreferrer"> 
                   <div className="gallery-item">
                     <Img                           
